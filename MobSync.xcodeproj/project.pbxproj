@@ -167,6 +167,10 @@
 		D29765F418BDD86800F696EB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D297660118BDDE2B00F696EB /* Mob */,
+				D297660018BDDE2100F696EB /* Activity */,
+				D297660218BDDE3400F696EB /* Friends */,
+				D29765FF18BDDE1300F696EB /* Settings */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -177,6 +181,34 @@
 				D29765D518BC7C1900F696EB /* Images.xcassets */,
 			);
 			name = Assets;
+			sourceTree = "<group>";
+		};
+		D29765FF18BDDE1300F696EB /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		D297660018BDDE2100F696EB /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Activity;
+			sourceTree = "<group>";
+		};
+		D297660118BDDE2B00F696EB /* Mob */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Mob;
+			sourceTree = "<group>";
+		};
+		D297660218BDDE3400F696EB /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Friends;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
