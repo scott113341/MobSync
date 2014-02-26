@@ -107,9 +107,12 @@
 		D29765C918BC7C1900F696EB /* MobSync */ = {
 			isa = PBXGroup;
 			children = (
+				D29765F518BDD87D00F696EB /* Assets */,
+				D29765F218BDD85800F696EB /* Models */,
+				D29765F318BDD86400F696EB /* Views */,
+				D29765F418BDD86800F696EB /* Controllers */,
 				D29765D218BC7C1900F696EB /* AppDelegate.h */,
 				D29765D318BC7C1900F696EB /* AppDelegate.m */,
-				D29765D518BC7C1900F696EB /* Images.xcassets */,
 				D29765CA18BC7C1900F696EB /* Supporting Files */,
 			);
 			path = MobSync;
@@ -142,6 +145,35 @@
 				D29765E518BC7C1900F696EB /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D29765F218BDD85800F696EB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		D29765F318BDD86400F696EB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		D29765F418BDD86800F696EB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		D29765F518BDD87D00F696EB /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				D29765D518BC7C1900F696EB /* Images.xcassets */,
+			);
+			name = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
