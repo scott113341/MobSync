@@ -20,6 +20,11 @@
 		D29765E718BC7C1900F696EB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D29765E518BC7C1900F696EB /* InfoPlist.strings */; };
 		D29765E918BC7C1900F696EB /* MobSyncTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D29765E818BC7C1900F696EB /* MobSyncTests.m */; };
 		D29765F718BDD8DD00F696EB /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D29765F618BDD8DD00F696EB /* MainStoryboard.storyboard */; };
+		D297660818BDE03900F696EB /* ActivityTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D297660718BDE03900F696EB /* ActivityTableViewController.m */; };
+		D297660B18BDE0B500F696EB /* Mob.m in Sources */ = {isa = PBXBuildFile; fileRef = D297660A18BDE0B500F696EB /* Mob.m */; };
+		D297660E18BDE0C300F696EB /* Mobs.m in Sources */ = {isa = PBXBuildFile; fileRef = D297660D18BDE0C300F696EB /* Mobs.m */; };
+		D297661118BDE2B600F696EB /* ActivityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D297661018BDE2B600F696EB /* ActivityTableViewCell.m */; };
+		D297661418BDEFBB00F696EB /* ActivityDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D297661318BDEFBB00F696EB /* ActivityDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +55,16 @@
 		D29765E618BC7C1900F696EB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D29765E818BC7C1900F696EB /* MobSyncTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MobSyncTests.m; sourceTree = "<group>"; };
 		D29765F618BDD8DD00F696EB /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		D297660618BDE03900F696EB /* ActivityTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityTableViewController.h; sourceTree = "<group>"; };
+		D297660718BDE03900F696EB /* ActivityTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityTableViewController.m; sourceTree = "<group>"; };
+		D297660918BDE0B500F696EB /* Mob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mob.h; sourceTree = "<group>"; };
+		D297660A18BDE0B500F696EB /* Mob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mob.m; sourceTree = "<group>"; };
+		D297660C18BDE0C300F696EB /* Mobs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mobs.h; sourceTree = "<group>"; };
+		D297660D18BDE0C300F696EB /* Mobs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mobs.m; sourceTree = "<group>"; };
+		D297660F18BDE2B600F696EB /* ActivityTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityTableViewCell.h; sourceTree = "<group>"; };
+		D297661018BDE2B600F696EB /* ActivityTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityTableViewCell.m; sourceTree = "<group>"; };
+		D297661218BDEFBB00F696EB /* ActivityDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityDetailViewController.h; sourceTree = "<group>"; };
+		D297661318BDEFBB00F696EB /* ActivityDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +167,10 @@
 		D29765F218BDD85800F696EB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D297660C18BDE0C300F696EB /* Mobs.h */,
+				D297660D18BDE0C300F696EB /* Mobs.m */,
+				D297660918BDE0B500F696EB /* Mob.h */,
+				D297660A18BDE0B500F696EB /* Mob.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -193,6 +212,12 @@
 		D297660018BDDE2100F696EB /* Activity */ = {
 			isa = PBXGroup;
 			children = (
+				D297660618BDE03900F696EB /* ActivityTableViewController.h */,
+				D297660718BDE03900F696EB /* ActivityTableViewController.m */,
+				D297660F18BDE2B600F696EB /* ActivityTableViewCell.h */,
+				D297661018BDE2B600F696EB /* ActivityTableViewCell.m */,
+				D297661218BDEFBB00F696EB /* ActivityDetailViewController.h */,
+				D297661318BDEFBB00F696EB /* ActivityDetailViewController.m */,
 			);
 			name = Activity;
 			sourceTree = "<group>";
@@ -307,8 +332,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D297660E18BDE0C300F696EB /* Mobs.m in Sources */,
 				D29765D418BC7C1900F696EB /* AppDelegate.m in Sources */,
+				D297661118BDE2B600F696EB /* ActivityTableViewCell.m in Sources */,
+				D297660818BDE03900F696EB /* ActivityTableViewController.m in Sources */,
+				D297660B18BDE0B500F696EB /* Mob.m in Sources */,
 				D29765D018BC7C1900F696EB /* main.m in Sources */,
+				D297661418BDEFBB00F696EB /* ActivityDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,6 +539,7 @@
 				D29765EE18BC7C1900F696EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D29765EF18BC7C1900F696EB /* Build configuration list for PBXNativeTarget "MobSyncTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +548,7 @@
 				D29765F118BC7C1900F696EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

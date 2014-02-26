@@ -4,30 +4,63 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--Mobs List View Controller - Mobs-->
+        <!--Activity Table View Controller - Recent Mobs-->
         <scene sceneID="mbT-PK-Akd">
             <objects>
-                <tableViewController id="CUF-lV-cml" customClass="MobsListViewController" sceneMemberID="viewController">
+                <tableViewController id="CUF-lV-cml" customClass="ActivityTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="mWd-11-vkP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="PU0-ll-PbE">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="PU0-ll-PbE">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PU0-ll-PbE" id="3m3-cv-M5L">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="TtA-xg-u0I" kind="push" id="KFs-2H-rft"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Mobs" id="8db-ZJ-g4m"/>
+                    <navigationItem key="navigationItem" title="Recent Mobs" id="8db-ZJ-g4m"/>
+                    <connections>
+                        <outlet property="activityTableView" destination="mWd-11-vkP" id="aJW-qz-qHq"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GnU-0V-Q4A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="706" y="-125"/>
+        </scene>
+        <!--Activity Detail View Controller-->
+        <scene sceneID="HOe-Xi-XfF">
+            <objects>
+                <viewController storyboardIdentifier="activityDetailViewController" id="TtA-xg-u0I" customClass="ActivityDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5id-LE-gmd"/>
+                        <viewControllerLayoutGuide type="bottom" id="YEE-Vt-sjs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZY1-LH-pM4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Meowwww" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQb-4w-WBG">
+                                <rect key="frame" x="96" y="239" width="86" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="4rX-Hv-9vP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SlK-8Y-HNl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1221" y="-125"/>
         </scene>
         <!--View Controller - Item-->
         <scene sceneID="0UP-P1-jds">
@@ -48,11 +81,11 @@
             </objects>
             <point key="canvasLocation" x="172" y="-858"/>
         </scene>
-        <!--Mobs Navigation Controller - Item-->
+        <!--Navigation Controller - Recent Mobs-->
         <scene sceneID="Uoj-j3-ujk">
             <objects>
-                <navigationController definesPresentationContext="YES" id="age-54-QPS" customClass="MobsNavigationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="2KJ-EK-qz5"/>
+                <navigationController definesPresentationContext="YES" id="age-54-QPS" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Recent Mobs" id="2KJ-EK-qz5"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6eO-Hb-xNX">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
