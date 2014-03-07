@@ -20,7 +20,7 @@
             </objects>
             <point key="canvasLocation" x="172" y="-865"/>
         </scene>
-        <!--Mob View Controller - Mob-->
+        <!--Mob View Controller - MobSync-->
         <scene sceneID="XDC-3e-Vis">
             <objects>
                 <viewController storyboardIdentifier="MobView" id="I4p-Gi-TNX" customClass="MobViewController" sceneMemberID="viewController">
@@ -42,10 +42,17 @@
                                     <action selector="mobButtonWasPressed:" destination="I4p-Gi-TNX" eventType="touchUpInside" id="DbQ-ev-R4c"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="To mob somewhere with your friends, tap the button." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="w5D-Xh-rZc">
+                                <rect key="frame" x="20" y="406" width="280" height="79"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Mob" id="bbT-Mq-LOh"/>
+                    <navigationItem key="navigationItem" title="MobSync" id="bbT-Mq-LOh"/>
                     <connections>
                         <segue destination="qnV-3l-zO8" kind="push" identifier="MobCreationSegue" id="K33-s2-w8x"/>
                     </connections>
