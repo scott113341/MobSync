@@ -31,6 +31,10 @@
 		D297660E18BDE0C300F696EB /* Mobs.m in Sources */ = {isa = PBXBuildFile; fileRef = D297660D18BDE0C300F696EB /* Mobs.m */; };
 		D297661118BDE2B600F696EB /* ActivityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D297661018BDE2B600F696EB /* ActivityTableViewCell.m */; };
 		D297661418BDEFBB00F696EB /* ActivityDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D297661318BDEFBB00F696EB /* ActivityDetailViewController.m */; };
+		D2F5F0A118C97C7F00988340 /* Contact@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2F5F09D18C97C7F00988340 /* Contact@2x.png */; };
+		D2F5F0A218C97C7F00988340 /* More@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2F5F09E18C97C7F00988340 /* More@2x.png */; };
+		D2F5F0A318C97C7F00988340 /* Recents@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2F5F09F18C97C7F00988340 /* Recents@2x.png */; };
+		D2F5F0A418C97C7F00988340 /* Syncing@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2F5F0A018C97C7F00988340 /* Syncing@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +83,10 @@
 		D297661018BDE2B600F696EB /* ActivityTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityTableViewCell.m; sourceTree = "<group>"; };
 		D297661218BDEFBB00F696EB /* ActivityDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityDetailViewController.h; sourceTree = "<group>"; };
 		D297661318BDEFBB00F696EB /* ActivityDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityDetailViewController.m; sourceTree = "<group>"; };
+		D2F5F09D18C97C7F00988340 /* Contact@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Contact@2x.png"; sourceTree = "<group>"; };
+		D2F5F09E18C97C7F00988340 /* More@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "More@2x.png"; sourceTree = "<group>"; };
+		D2F5F09F18C97C7F00988340 /* Recents@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Recents@2x.png"; sourceTree = "<group>"; };
+		D2F5F0A018C97C7F00988340 /* Syncing@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Syncing@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +219,10 @@
 		D29765F518BDD87D00F696EB /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				D2F5F09D18C97C7F00988340 /* Contact@2x.png */,
+				D2F5F09E18C97C7F00988340 /* More@2x.png */,
+				D2F5F09F18C97C7F00988340 /* Recents@2x.png */,
+				D2F5F0A018C97C7F00988340 /* Syncing@2x.png */,
 				0A7381E418C2C05100F92E6A /* BtnRing.png */,
 				0A7381E518C2C05100F92E6A /* BtnRing@2x.png */,
 				0A7381D018C2A6F400F92E6A /* MobBtn.png */,
@@ -333,13 +345,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2F5F0A218C97C7F00988340 /* More@2x.png in Resources */,
 				0A7381E718C2C05100F92E6A /* BtnRing@2x.png in Resources */,
 				D29765F718BDD8DD00F696EB /* MainStoryboard.storyboard in Resources */,
 				D29765CE18BC7C1900F696EB /* InfoPlist.strings in Resources */,
 				D29765D618BC7C1900F696EB /* Images.xcassets in Resources */,
 				0A7381D218C2A6F400F92E6A /* MobBtn.png in Resources */,
 				0A7381E618C2C05100F92E6A /* BtnRing.png in Resources */,
+				D2F5F0A318C97C7F00988340 /* Recents@2x.png in Resources */,
+				D2F5F0A418C97C7F00988340 /* Syncing@2x.png in Resources */,
 				0A7381D318C2A6F400F92E6A /* MobBtn@2x.png in Resources */,
+				D2F5F0A118C97C7F00988340 /* Contact@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

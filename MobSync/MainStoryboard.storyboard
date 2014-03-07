@@ -4,11 +4,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller - Mob-->
+        <!--Navigation Controller - MobSync-->
         <scene sceneID="Ild-kH-8tk">
             <objects>
                 <navigationController definesPresentationContext="YES" id="jsg-Xj-5bM" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Mob" id="5yv-DJ-k3r"/>
+                    <tabBarItem key="tabBarItem" title="MobSync" image="Syncing.png" id="5yv-DJ-k3r"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="SmS-md-nxE">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -135,7 +135,7 @@
         <scene sceneID="Uoj-j3-ujk">
             <objects>
                 <navigationController definesPresentationContext="YES" id="age-54-QPS" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Recent Mobs" id="2KJ-EK-qz5"/>
+                    <tabBarItem key="tabBarItem" title="Recent Mobs" image="Recents.png" id="2KJ-EK-qz5"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6eO-Hb-xNX">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -201,7 +201,7 @@
         <scene sceneID="tG4-NG-3V1">
             <objects>
                 <navigationController definesPresentationContext="YES" id="QFi-Pa-ev0" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Settings" id="Reg-7N-iv2"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="More.png" id="Reg-7N-iv2"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="G44-SD-e7W">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -217,7 +217,7 @@
         <scene sceneID="aS3-K4-O3B">
             <objects>
                 <navigationController definesPresentationContext="YES" id="Ie8-Hm-Bxs" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Friends" id="hUv-zB-fa8"/>
+                    <tabBarItem key="tabBarItem" title="Friends" image="Contact.png" id="hUv-zB-fa8"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="xeT-wV-YDT">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -252,7 +252,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Contact.png" width="25" height="25"/>
         <image name="MobBtn.png" width="186" height="186"/>
+        <image name="More.png" width="25" height="5"/>
+        <image name="Recents.png" width="24" height="24"/>
+        <image name="Syncing.png" width="31" height="24"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
