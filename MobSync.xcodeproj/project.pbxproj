@@ -35,6 +35,7 @@
 		D2F5F0A218C97C7F00988340 /* More@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2F5F09E18C97C7F00988340 /* More@2x.png */; };
 		D2F5F0A318C97C7F00988340 /* Recents@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2F5F09F18C97C7F00988340 /* Recents@2x.png */; };
 		D2F5F0A418C97C7F00988340 /* Syncing@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2F5F0A018C97C7F00988340 /* Syncing@2x.png */; };
+		D2F5F0A718C9831800988340 /* MobSyncNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F5F0A618C9831800988340 /* MobSyncNavigationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,8 @@
 		D2F5F09E18C97C7F00988340 /* More@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "More@2x.png"; sourceTree = "<group>"; };
 		D2F5F09F18C97C7F00988340 /* Recents@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Recents@2x.png"; sourceTree = "<group>"; };
 		D2F5F0A018C97C7F00988340 /* Syncing@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Syncing@2x.png"; sourceTree = "<group>"; };
+		D2F5F0A518C9831800988340 /* MobSyncNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobSyncNavigationController.h; sourceTree = "<group>"; };
+		D2F5F0A618C9831800988340 /* MobSyncNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobSyncNavigationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +215,8 @@
 				D297660018BDDE2100F696EB /* Activity */,
 				D297660218BDDE3400F696EB /* Friends */,
 				D29765FF18BDDE1300F696EB /* Settings */,
+				D2F5F0A518C9831800988340 /* MobSyncNavigationController.h */,
+				D2F5F0A618C9831800988340 /* MobSyncNavigationController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -375,6 +380,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D297660E18BDE0C300F696EB /* Mobs.m in Sources */,
+				D2F5F0A718C9831800988340 /* MobSyncNavigationController.m in Sources */,
 				0A7381CF18C2A69800F92E6A /* MobCreationViewController.m in Sources */,
 				D29765D418BC7C1900F696EB /* AppDelegate.m in Sources */,
 				D297661118BDE2B600F696EB /* ActivityTableViewCell.m in Sources */,

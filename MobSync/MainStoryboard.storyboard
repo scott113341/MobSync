@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller - MobSync-->
+        <!--Mob Sync Navigation Controller - MobSync-->
         <scene sceneID="Ild-kH-8tk">
             <objects>
-                <navigationController definesPresentationContext="YES" id="jsg-Xj-5bM" sceneMemberID="viewController">
+                <navigationController definesPresentationContext="YES" id="jsg-Xj-5bM" customClass="MobSyncNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="MobSync" image="Syncing.png" id="5yv-DJ-k3r"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="SmS-md-nxE">
                         <autoresizingMask key="autoresizingMask"/>
@@ -66,12 +66,32 @@
             <objects>
                 <viewController storyboardIdentifier="MobCreationVC" id="qnV-3l-zO8" customClass="MobCreationViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="11a-Yr-cdq"/>
-                        <viewControllerLayoutGuide type="bottom" id="Dx8-WY-bOd"/>
+                        <viewControllerLayoutGuide type="top" id="hQI-oa-uEN"/>
+                        <viewControllerLayoutGuide type="bottom" id="BFM-zh-mrR"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="zVM-iX-CNM">
+                    <view key="view" contentMode="scaleToFill" id="0OL-Lb-vTy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Where are you mobbing?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wlj-tx-xP1">
+                                <rect key="frame" x="64" y="95" width="193" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Who are you notifying?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="85z-FU-jOC">
+                                <rect key="frame" x="72" y="223" width="177" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="LRq-Ij-Jux">
+                                <rect key="frame" x="20" y="124" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Create Mob" id="f0a-Of-EwW"/>
@@ -138,10 +158,10 @@
             </objects>
             <point key="canvasLocation" x="1221" y="-125"/>
         </scene>
-        <!--Navigation Controller - Recent Mobs-->
+        <!--Mob Sync Navigation Controller - Recent Mobs-->
         <scene sceneID="Uoj-j3-ujk">
             <objects>
-                <navigationController definesPresentationContext="YES" id="age-54-QPS" sceneMemberID="viewController">
+                <navigationController definesPresentationContext="YES" id="age-54-QPS" customClass="MobSyncNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Recent Mobs" image="Recents.png" id="2KJ-EK-qz5"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6eO-Hb-xNX">
                         <autoresizingMask key="autoresizingMask"/>
@@ -204,10 +224,10 @@
             </objects>
             <point key="canvasLocation" x="708" y="1370"/>
         </scene>
-        <!--Navigation Controller - Settings-->
+        <!--Mob Sync Navigation Controller - Settings-->
         <scene sceneID="tG4-NG-3V1">
             <objects>
-                <navigationController definesPresentationContext="YES" id="QFi-Pa-ev0" sceneMemberID="viewController">
+                <navigationController definesPresentationContext="YES" id="QFi-Pa-ev0" customClass="MobSyncNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Settings" image="More.png" id="Reg-7N-iv2"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="G44-SD-e7W">
                         <autoresizingMask key="autoresizingMask"/>
@@ -220,10 +240,10 @@
             </objects>
             <point key="canvasLocation" x="172" y="1370"/>
         </scene>
-        <!--Navigation Controller - Friends-->
+        <!--Mob Sync Navigation Controller - Friends-->
         <scene sceneID="aS3-K4-O3B">
             <objects>
-                <navigationController definesPresentationContext="YES" id="Ie8-Hm-Bxs" sceneMemberID="viewController">
+                <navigationController definesPresentationContext="YES" id="Ie8-Hm-Bxs" customClass="MobSyncNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Friends" image="Contact.png" id="hUv-zB-fa8"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="xeT-wV-YDT">
                         <autoresizingMask key="autoresizingMask"/>
