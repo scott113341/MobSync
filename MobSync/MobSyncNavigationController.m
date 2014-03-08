@@ -7,6 +7,7 @@
 //
 
 #import "MobSyncNavigationController.h"
+#import "UIColor+Hex.h"
 
 @interface MobSyncNavigationController ()
 
@@ -18,8 +19,8 @@
 {
     [super viewDidLoad];
     
-    self.navigationBar.barTintColor = [UIColor redColor];
-    self.navigationBar.barStyle = UIBarStyleBlack;
+    self.navigationBar.barTintColor = [UIColor colorWithHex:@"#D6CEC3"];
+    // self.navigationBar.barStyle = UIBarStyleBlack;
 }
 
 @end
