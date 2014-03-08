@@ -116,6 +116,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D201C0B018CBE33B0081446C /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				D2F5F0A518C9831800988340 /* MobSyncNavigationController.h */,
+				D2F5F0A618C9831800988340 /* MobSyncNavigationController.m */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
 		D29765B718BC7C1900F696EB = {
 			isa = PBXGroup;
 			children = (
@@ -215,8 +224,7 @@
 				D297660018BDDE2100F696EB /* Activity */,
 				D297660218BDDE3400F696EB /* Friends */,
 				D29765FF18BDDE1300F696EB /* Settings */,
-				D2F5F0A518C9831800988340 /* MobSyncNavigationController.h */,
-				D2F5F0A618C9831800988340 /* MobSyncNavigationController.m */,
+				D201C0B018CBE33B0081446C /* Other */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
