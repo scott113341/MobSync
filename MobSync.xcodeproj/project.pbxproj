@@ -13,6 +13,7 @@
 		0A7381D318C2A6F400F92E6A /* MobBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A7381D118C2A6F400F92E6A /* MobBtn@2x.png */; };
 		0A7381E618C2C05100F92E6A /* BtnRing.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A7381E418C2C05100F92E6A /* BtnRing.png */; };
 		0A7381E718C2C05100F92E6A /* BtnRing@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A7381E518C2C05100F92E6A /* BtnRing@2x.png */; };
+		D201C0B418CBE3950081446C /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = D201C0B318CBE3950081446C /* UIColor+Hex.m */; };
 		D29765C418BC7C1900F696EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D29765C318BC7C1900F696EB /* Foundation.framework */; };
 		D29765C618BC7C1900F696EB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D29765C518BC7C1900F696EB /* CoreGraphics.framework */; };
 		D29765C818BC7C1900F696EB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D29765C718BC7C1900F696EB /* UIKit.framework */; };
@@ -57,6 +58,8 @@
 		0A7381D118C2A6F400F92E6A /* MobBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MobBtn@2x.png"; sourceTree = "<group>"; };
 		0A7381E418C2C05100F92E6A /* BtnRing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BtnRing.png; sourceTree = "<group>"; };
 		0A7381E518C2C05100F92E6A /* BtnRing@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BtnRing@2x.png"; sourceTree = "<group>"; };
+		D201C0B218CBE3950081446C /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		D201C0B318CBE3950081446C /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
 		D29765C018BC7C1900F696EB /* MobSync.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobSync.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D29765C318BC7C1900F696EB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D29765C518BC7C1900F696EB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -125,6 +128,15 @@
 			name = Other;
 			sourceTree = "<group>";
 		};
+		D201C0B118CBE37A0081446C /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				D201C0B218CBE3950081446C /* UIColor+Hex.h */,
+				D201C0B318CBE3950081446C /* UIColor+Hex.m */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
 		D29765B718BC7C1900F696EB = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +170,7 @@
 		D29765C918BC7C1900F696EB /* MobSync */ = {
 			isa = PBXGroup;
 			children = (
+				D201C0B118CBE37A0081446C /* Core */,
 				D29765F518BDD87D00F696EB /* Assets */,
 				D29765F218BDD85800F696EB /* Models */,
 				D29765F318BDD86400F696EB /* Views */,
@@ -395,6 +408,7 @@
 				0A7381CC18C2A68700F92E6A /* MobViewController.m in Sources */,
 				D297660818BDE03900F696EB /* ActivityTableViewController.m in Sources */,
 				D297660B18BDE0B500F696EB /* Mob.m in Sources */,
+				D201C0B418CBE3950081446C /* UIColor+Hex.m in Sources */,
 				D29765D018BC7C1900F696EB /* main.m in Sources */,
 				D297661418BDEFBB00F696EB /* ActivityDetailViewController.m in Sources */,
 			);
