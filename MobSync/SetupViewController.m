@@ -7,6 +7,7 @@
 //
 
 #import "SetupViewController.h"
+#import "User.h"
 
 @interface SetupViewController ()
 
@@ -14,25 +15,20 @@
 
 @implementation SetupViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+-(void)continueButtonWasPressed:(id)sender
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+    [self.nameTextField resignFirstResponder];
+    
+    NSLog(@"asdf");
+    
+    [self createUser];
 }
 
-- (void)viewDidLoad
+-(void)createUser
 {
-    [super viewDidLoad];
-	// Do any additional setup after loading the view.
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    User *user = [User sharedInstance];
+    user.name = self.nameTextField.text;
+    [user create];
 }
 
 @end

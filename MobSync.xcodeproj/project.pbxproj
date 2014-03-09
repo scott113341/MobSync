@@ -17,6 +17,7 @@
 		D201C0B618CBE7F80081446C /* SplashStuff.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D201C0B518CBE7F80081446C /* SplashStuff.storyboard */; };
 		D201C0BA18CBE82C0081446C /* SetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D201C0B918CBE82C0081446C /* SetupViewController.m */; };
 		D201C0C018CBEB9F0081446C /* MobSyncNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D201C0BF18CBEB9F0081446C /* MobSyncNavigationController.m */; };
+		D201C0C318CC537C0081446C /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = D201C0C218CC537C0081446C /* User.m */; };
 		D29765C418BC7C1900F696EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D29765C318BC7C1900F696EB /* Foundation.framework */; };
 		D29765C618BC7C1900F696EB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D29765C518BC7C1900F696EB /* CoreGraphics.framework */; };
 		D29765C818BC7C1900F696EB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D29765C718BC7C1900F696EB /* UIKit.framework */; };
@@ -67,6 +68,8 @@
 		D201C0B918CBE82C0081446C /* SetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetupViewController.m; sourceTree = "<group>"; };
 		D201C0BE18CBEB9F0081446C /* MobSyncNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobSyncNavigationController.h; sourceTree = "<group>"; };
 		D201C0BF18CBEB9F0081446C /* MobSyncNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobSyncNavigationController.m; sourceTree = "<group>"; };
+		D201C0C118CC537C0081446C /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		D201C0C218CC537C0081446C /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		D29765C018BC7C1900F696EB /* MobSync.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobSync.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D29765C318BC7C1900F696EB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D29765C518BC7C1900F696EB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -232,6 +235,8 @@
 				D297660D18BDE0C300F696EB /* Mobs.m */,
 				D297660918BDE0B500F696EB /* Mob.h */,
 				D297660A18BDE0B500F696EB /* Mob.m */,
+				D201C0C118CC537C0081446C /* User.h */,
+				D201C0C218CC537C0081446C /* User.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -359,6 +364,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = PWNZONE;
 				TargetAttributes = {
+					D29765BF18BC7C1900F696EB = {
+						DevelopmentTeam = 432G6CL9N8;
+					};
 					D29765DA18BC7C1900F696EB = {
 						TestTargetID = D29765BF18BC7C1900F696EB;
 					};
@@ -417,6 +425,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D201C0C318CC537C0081446C /* User.m in Sources */,
 				D297660E18BDE0C300F696EB /* Mobs.m in Sources */,
 				0A7381CF18C2A69800F92E6A /* MobCreationViewController.m in Sources */,
 				D29765D418BC7C1900F696EB /* AppDelegate.m in Sources */,
@@ -547,10 +556,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MobSync/MobSync-Prefix.pch";
 				INFOPLIST_FILE = "MobSync/MobSync-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -560,10 +573,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MobSync/MobSync-Prefix.pch";
 				INFOPLIST_FILE = "MobSync/MobSync-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
