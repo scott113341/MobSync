@@ -7,6 +7,7 @@
 //
 
 #import "Mob.h"
+#import "UIColor+Hex.h"
 
 @implementation Mob
 
@@ -21,8 +22,8 @@
 
 -(UIColor *)statusColor
 {
-    if (self.status == 0) return [UIColor redColor];
-    else return [UIColor greenColor];
+    if (self.status == 0) return [UIColor colorWithHex:@"#E82323"];
+    else return [UIColor colorWithHex:@"#00B346"];
 }
 
 @end

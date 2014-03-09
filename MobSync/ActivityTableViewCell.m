@@ -21,7 +21,7 @@
         cell.detailTextLabel.textColor = [mob statusColor];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         
-        self.statusBar = [[UIView alloc] initWithFrame:CGRectMake(0, 0, cell.indentationWidth, height)];
+        self.statusBar = [[UIView alloc] initWithFrame:CGRectMake(0, 0, cell.indentationWidth/2, height)];
         self.statusBar.backgroundColor = [mob statusColor];
         [cell.contentView addSubview:self.statusBar];
     }
