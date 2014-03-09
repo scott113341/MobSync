@@ -14,6 +14,9 @@
 		0A7381E618C2C05100F92E6A /* BtnRing.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A7381E418C2C05100F92E6A /* BtnRing.png */; };
 		0A7381E718C2C05100F92E6A /* BtnRing@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A7381E518C2C05100F92E6A /* BtnRing@2x.png */; };
 		D201C0B418CBE3950081446C /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = D201C0B318CBE3950081446C /* UIColor+Hex.m */; };
+		D201C0B618CBE7F80081446C /* SplashStuff.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D201C0B518CBE7F80081446C /* SplashStuff.storyboard */; };
+		D201C0BA18CBE82C0081446C /* SetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D201C0B918CBE82C0081446C /* SetupViewController.m */; };
+		D201C0C018CBEB9F0081446C /* MobSyncNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D201C0BF18CBEB9F0081446C /* MobSyncNavigationController.m */; };
 		D29765C418BC7C1900F696EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D29765C318BC7C1900F696EB /* Foundation.framework */; };
 		D29765C618BC7C1900F696EB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D29765C518BC7C1900F696EB /* CoreGraphics.framework */; };
 		D29765C818BC7C1900F696EB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D29765C718BC7C1900F696EB /* UIKit.framework */; };
@@ -36,7 +39,6 @@
 		D2F5F0A218C97C7F00988340 /* More@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2F5F09E18C97C7F00988340 /* More@2x.png */; };
 		D2F5F0A318C97C7F00988340 /* Recents@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2F5F09F18C97C7F00988340 /* Recents@2x.png */; };
 		D2F5F0A418C97C7F00988340 /* Syncing@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2F5F0A018C97C7F00988340 /* Syncing@2x.png */; };
-		D2F5F0A718C9831800988340 /* MobSyncNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2F5F0A618C9831800988340 /* MobSyncNavigationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,11 @@
 		0A7381E518C2C05100F92E6A /* BtnRing@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BtnRing@2x.png"; sourceTree = "<group>"; };
 		D201C0B218CBE3950081446C /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
 		D201C0B318CBE3950081446C /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		D201C0B518CBE7F80081446C /* SplashStuff.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SplashStuff.storyboard; sourceTree = "<group>"; };
+		D201C0B818CBE82C0081446C /* SetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetupViewController.h; sourceTree = "<group>"; };
+		D201C0B918CBE82C0081446C /* SetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetupViewController.m; sourceTree = "<group>"; };
+		D201C0BE18CBEB9F0081446C /* MobSyncNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobSyncNavigationController.h; sourceTree = "<group>"; };
+		D201C0BF18CBEB9F0081446C /* MobSyncNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobSyncNavigationController.m; sourceTree = "<group>"; };
 		D29765C018BC7C1900F696EB /* MobSync.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobSync.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D29765C318BC7C1900F696EB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D29765C518BC7C1900F696EB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -91,8 +98,6 @@
 		D2F5F09E18C97C7F00988340 /* More@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "More@2x.png"; sourceTree = "<group>"; };
 		D2F5F09F18C97C7F00988340 /* Recents@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Recents@2x.png"; sourceTree = "<group>"; };
 		D2F5F0A018C97C7F00988340 /* Syncing@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Syncing@2x.png"; sourceTree = "<group>"; };
-		D2F5F0A518C9831800988340 /* MobSyncNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobSyncNavigationController.h; sourceTree = "<group>"; };
-		D2F5F0A618C9831800988340 /* MobSyncNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobSyncNavigationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,8 +127,8 @@
 		D201C0B018CBE33B0081446C /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				D2F5F0A518C9831800988340 /* MobSyncNavigationController.h */,
-				D2F5F0A618C9831800988340 /* MobSyncNavigationController.m */,
+				D201C0BE18CBEB9F0081446C /* MobSyncNavigationController.h */,
+				D201C0BF18CBEB9F0081446C /* MobSyncNavigationController.m */,
 			);
 			name = Other;
 			sourceTree = "<group>";
@@ -135,6 +140,15 @@
 				D201C0B318CBE3950081446C /* UIColor+Hex.m */,
 			);
 			name = Core;
+			sourceTree = "<group>";
+		};
+		D201C0B718CBE8100081446C /* Setup */ = {
+			isa = PBXGroup;
+			children = (
+				D201C0B818CBE82C0081446C /* SetupViewController.h */,
+				D201C0B918CBE82C0081446C /* SetupViewController.m */,
+			);
+			name = Setup;
 			sourceTree = "<group>";
 		};
 		D29765B718BC7C1900F696EB = {
@@ -226,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				D29765F618BDD8DD00F696EB /* MainStoryboard.storyboard */,
+				D201C0B518CBE7F80081446C /* SplashStuff.storyboard */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -233,6 +248,7 @@
 		D29765F418BDD86800F696EB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D201C0B718CBE8100081446C /* Setup */,
 				D297660118BDDE2B00F696EB /* Mob */,
 				D297660018BDDE2100F696EB /* Activity */,
 				D297660218BDDE3400F696EB /* Friends */,
@@ -379,6 +395,7 @@
 				0A7381D218C2A6F400F92E6A /* MobBtn.png in Resources */,
 				0A7381E618C2C05100F92E6A /* BtnRing.png in Resources */,
 				D2F5F0A318C97C7F00988340 /* Recents@2x.png in Resources */,
+				D201C0B618CBE7F80081446C /* SplashStuff.storyboard in Resources */,
 				D2F5F0A418C97C7F00988340 /* Syncing@2x.png in Resources */,
 				0A7381D318C2A6F400F92E6A /* MobBtn@2x.png in Resources */,
 				D2F5F0A118C97C7F00988340 /* Contact@2x.png in Resources */,
@@ -401,9 +418,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D297660E18BDE0C300F696EB /* Mobs.m in Sources */,
-				D2F5F0A718C9831800988340 /* MobSyncNavigationController.m in Sources */,
 				0A7381CF18C2A69800F92E6A /* MobCreationViewController.m in Sources */,
 				D29765D418BC7C1900F696EB /* AppDelegate.m in Sources */,
+				D201C0C018CBEB9F0081446C /* MobSyncNavigationController.m in Sources */,
+				D201C0BA18CBE82C0081446C /* SetupViewController.m in Sources */,
 				D297661118BDE2B600F696EB /* ActivityTableViewCell.m in Sources */,
 				0A7381CC18C2A68700F92E6A /* MobViewController.m in Sources */,
 				D297660818BDE03900F696EB /* ActivityTableViewController.m in Sources */,
