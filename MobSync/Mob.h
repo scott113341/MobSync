@@ -16,6 +16,7 @@
 
 @property (strong) NSString *name;
 @property NSInteger status;
+@property (strong) NSString *date;
 
 -(UIColor *)statusColor;
 

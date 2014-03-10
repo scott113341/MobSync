@@ -41,10 +41,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
     Mob *mob = [self.mobs mobAtIndex:[indexPath row]];
-    NSLog(@"%i %@", [indexPath row], mob);
-
     
     NSString *cellID = @"activityTableViewCell";
     ActivityTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
@@ -61,9 +58,7 @@
 // UITableViewDelegate protocol
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"selected %i", [indexPath row]);
-    NSLog(@"%@", tableView.dataSource);
-    
+    /*
     UIStoryboard *storyboard = self.storyboard;
     ActivityDetailViewController *activityDetailViewController = [storyboard instantiateViewControllerWithIdentifier:@"activityDetailViewController"];
     
@@ -77,6 +72,7 @@
     [[self navigationItem] setBackBarButtonItem:backButton];
     
     [self.navigationController pushViewController:activityDetailViewController animated:YES];
+     */
 }
 
 @end

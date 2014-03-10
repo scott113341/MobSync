@@ -11,6 +11,8 @@
 #import "UserStorage.h"
 #import "NewMobAlertView.h"
 #import "MobSyncViewController.h"
+#import "Mobs.h"
+#import "MobSyncServer.h"
 
 @implementation AppDelegate
 
@@ -36,8 +38,7 @@
 
 -(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
 {
-    NSLog(@"got apn: %@", userInfo);
-    self.notificationData = userInfo;
+    [self processRemoteNotificationData:userInfo];
     
     NewMobAlertView *alert = [[NewMobAlertView alloc] init];
     alert.delegate = self;
@@ -49,12 +50,37 @@
 {
     NSLog(@"%i", buttonIndex);
     
+    NSMutableArray *allMobs = [[Mobs sharedInstance] all];
+    Mob *mob = [allMobs objectAtIndex:[allMobs count]-1];
+    
     if (buttonIndex == 1) {
         UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"SplashStuff" bundle:nil];
         MobSyncViewController *mobSyncViewController = [mainStoryboard instantiateViewControllerWithIdentifier:@"MobSyncViewController"];
-        mobSyncViewController.notificationData = self.notificationData;
+        mobSyncViewController.mob = mob;
         [self.window.rootViewController presentViewController:mobSyncViewController animated:YES completion:nil];
     }
+    else {
+        mob.status = 0;
+    }
+}
+
+-(Mob *)processRemoteNotificationData:(NSDictionary *)data
+{
+    NSLog(@"got apn: %@", data);
+    self.notificationData = data;
+    
+    Mobs *mobs = [Mobs sharedInstance];
+    
+    // get mob data from server
+    NSString *uri = [NSString stringWithFormat:@"/mobs/%@.json", [self.notificationData objectForKey:@"mob_id"]];
+    NSData *mob = [MobSyncServer requestURI:uri HTTPMethod:@"GET" HTTPBody:@""];
+    
+    // create new local mob model
+    Mob *newMob = [[Mob alloc] initWithServerData:mob];
+    [mobs.all addObject:newMob];
+    [mobs save];
+    
+    return newMob;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

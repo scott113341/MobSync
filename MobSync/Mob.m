@@ -28,6 +28,7 @@
         
         self.name = [mob objectForKey:@"destination"];
         self.status = 1;
+        self.date = [mob objectForKey:@"date"];
     }
     return self;
 }

@@ -16,7 +16,7 @@
 
 -(IBAction)didPressDoneButton:(id)sender;
 
-@property (strong) NSDictionary *notificationData;
+@property (strong) Mob *mob;
 @property (strong) Mobs *mobs;
 
 @end

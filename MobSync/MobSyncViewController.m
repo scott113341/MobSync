@@ -20,15 +20,6 @@
     [super viewDidLoad];
     
     self.mobs = [Mobs sharedInstance];
-    
-    // get mob data from server
-    NSString *uri = [NSString stringWithFormat:@"/mobs/%@.json", [self.notificationData objectForKey:@"mob_id"]];
-    NSString *method = @"GET";
-    NSString *body = @"";
-    NSData *mob = [MobSyncServer requestURI:uri HTTPMethod:method HTTPBody:body];
-    
-    // create new local mob model
-    [self.mobs.all addObject:[[Mob alloc] initWithServerData:mob]];
 }
 
 -(void)didPressDoneButton:(id)sender
