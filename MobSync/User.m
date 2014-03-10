@@ -8,6 +8,7 @@
 
 #import "User.h"
 #import "UserStorage.h"
+#import "MobSyncServer.h"
 
 @implementation User
 
@@ -23,19 +24,11 @@
 
 -(BOOL)create
 {
-    NSString *bodyData = [NSString stringWithFormat:@"name=%@&device_id=%@", self.name, self.device_id];
+    NSString *uri = @"/users.json";
+    NSString *method = @"POST";
+    NSString *body = [NSString stringWithFormat:@"name=%@&device_id=%@", self.name, self.device_id];
     
-    NSMutableURLRequest *postRequest = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://75846f47.ngrok.com/users.json"]];
-    [postRequest setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
-    [postRequest setHTTPMethod:@"POST"];
-    [postRequest setHTTPBody:[NSData dataWithBytes:[bodyData UTF8String] length:strlen([bodyData UTF8String])]];
-    
-    NSURLResponse *requestResponse;
-    NSError *requestError;
-    
-    NSData *response = [NSURLConnection sendSynchronousRequest:postRequest returningResponse:&requestResponse error:&requestError];
-    
-    NSLog(@"%@", [[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding]);
+    NSData *response = [MobSyncServer requestURI:uri HTTPMethod:method HTTPBody:body];
     
     if (response == nil) return NO;
     else {
