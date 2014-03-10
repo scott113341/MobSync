@@ -7,12 +7,34 @@
 //
 
 #import "AppDelegate.h"
+#import "User.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeAlert)];
+    
+    User *user = [User sharedInstance];
+    user.device_id = @"nodeviceid";
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSLog(@"default user %@", [defaults objectForKey:@"user"]);
+    
+    NSLog(@"%@", [self.window.rootViewController description]);
+    
     return YES;
+}
+
+-(void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+{
+    User *user = [User sharedInstance];
+    user.device_id = [deviceToken description];
+}
+
+-(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
+{
+    NSLog(@"%@", userInfo);
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

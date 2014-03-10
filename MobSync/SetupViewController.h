@@ -11,8 +11,12 @@
 @interface SetupViewController : UIViewController
 
 @property (weak) IBOutlet UITextField *nameTextField;
-@property (weak) IBOutlet UIButton *continueButton;
 
-- (void) continueButtonWasPressed;
+-(IBAction)continueButtonWasPressed:(id)sender;
+
+@property (weak) NSUserDefaults *defaults;
+
+-(void)createUser;
+-(void)dismiss;
 
 @end

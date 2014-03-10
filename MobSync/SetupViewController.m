@@ -7,6 +7,7 @@
 //
 
 #import "SetupViewController.h"
+#import "User.h"
 
 @interface SetupViewController ()
 
@@ -14,25 +15,40 @@
 
 @implementation SetupViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
-- (void)viewDidLoad
+-(void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    
+    // if default user already created, skip setup
+    self.defaults = [NSUserDefaults standardUserDefaults];
+    if ([self.defaults objectForKey:@"user"] != nil) {
+        [self dismiss];
+    }
 }
 
-- (void)didReceiveMemoryWarning
+-(void)continueButtonWasPressed:(id)sender
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [self.nameTextField resignFirstResponder];
+    [self createUser];
+    [self dismiss];
+}
+
+-(void)createUser
+{
+    User *user = [User sharedInstance];
+    user.name = self.nameTextField.text;
+    [user create];
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:user.name forKey:@"user"];
+    NSLog(@"user %@ created", [defaults objectForKey:@"user"]);
+}
+
+-(void)dismiss
+{
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+    UIViewController *view = [storyboard instantiateViewControllerWithIdentifier:@"MSTabBarController"];
+    [self presentViewController:view animated:YES completion:nil];
 }
 
 @end
