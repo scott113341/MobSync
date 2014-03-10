@@ -18,19 +18,21 @@
 -(void)continueButtonWasPressed:(id)sender
 {
     [self.nameTextField resignFirstResponder];
-    [self createUser];
-    [self dismiss];
+    
+    if ([self createUser]) {
+        [self dismiss];
+    }
+    else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error!" message:@"An error occurred when registering for MobSync" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+    }
 }
 
--(void)createUser
+-(BOOL)createUser
 {
     User *user = [User sharedInstance];
     user.name = self.nameTextField.text;
-    [user create];
-    
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:user.name forKey:@"user"];
-    NSLog(@"user %@ created", [defaults objectForKey:@"user"]);
+    return [user create];
 }
 
 -(void)dismiss

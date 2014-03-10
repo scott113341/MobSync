@@ -10,10 +10,11 @@
 
 @interface UserStorage : NSObject
 
-- (BOOL)createInitialStorageDefaultsWithUsername:(NSString*)username;
-- (NSArray*)retrieveFriendList;
-- (NSArray*)addFriendWithUsername:(NSString*)username;
-- (NSString*)retrieveActiveUser;
-- (NSString*)setActiveUserWithUsername:(NSString*)username;
++(BOOL)createInitialStorageDefaultsWithUsername:(NSString*)username;
++(NSArray*)retrieveFriendList;
++(NSArray*)addFriendWithUsername:(NSString*)username;
++(NSString*)retrieveActiveUser;
++(NSString*)setActiveUserWithUsername:(NSString*)username;
++(void)destroyStorageDefaults;
 
 @end

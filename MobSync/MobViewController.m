@@ -8,6 +8,7 @@
 
 #import "MobViewController.h"
 #import "MobCreationViewController.h"
+#import "UserStorage.h"
 
 @interface MobViewController ()
 
@@ -61,12 +62,14 @@
                                                object:nil];
     
     // show setupviewcontroller if no default user loaded
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    //[defaults removeObjectForKey:@"user"];
-    if ([defaults objectForKey:@"user"] == nil) {
+    [UserStorage destroyStorageDefaults];
+    if ([UserStorage retrieveActiveUser] == nil) {
         UIStoryboard *splashStuff = [UIStoryboard storyboardWithName:@"SplashStuff" bundle:nil];
         UIViewController *setupViewController = [splashStuff instantiateViewControllerWithIdentifier:@"SetupViewController"];
         [self presentViewController:setupViewController animated:YES completion:nil];
+    }
+    else {
+        NSLog(@"user %@ loaded", [UserStorage retrieveActiveUser]);
     }
 }
 

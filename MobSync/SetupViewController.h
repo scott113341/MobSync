@@ -16,7 +16,7 @@
 
 @property (weak) NSUserDefaults *defaults;
 
--(void)createUser;
+-(BOOL)createUser;
 -(void)dismiss;
 
 @end
