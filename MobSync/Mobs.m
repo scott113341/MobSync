@@ -14,9 +14,8 @@
 {
     if (self = [super init]) {
         self.all = [[NSMutableArray alloc] init];
-        
-        [self.all addObject:[[Mob alloc] initMobWithName:@"Mob City" andStatus:0]];
-        [self.all addObject:[[Mob alloc] initMobWithName:@"Mob 2.0" andStatus:1]];
+        self.defaults = [NSUserDefaults standardUserDefaults];
+        [self load];
     }
     return self;
 }
@@ -24,6 +23,18 @@
 -(Mob *)mobAtIndex:(NSInteger)index
 {
     return [self.all objectAtIndex:index];
+}
+
+-(void)save
+{
+    [self.defaults setObject:[self all] forKey:@"mobs"];
+}
+
+-(void)load
+{
+    if ([self.defaults objectForKey:@"mobs"] != nil) {
+        self.all = [self.defaults objectForKey:@"mobs"];
+    }
 }
 
 +(id)sharedInstance

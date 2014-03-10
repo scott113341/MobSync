@@ -17,9 +17,10 @@
         self.mob = mob;
         
         cell.textLabel.text = mob.name;
-        cell.detailTextLabel.text = @"2/26/2014";
+        cell.detailTextLabel.text = mob.date;
         cell.detailTextLabel.textColor = [mob statusColor];
-        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        //cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         
         self.statusBar = [[UIView alloc] initWithFrame:CGRectMake(0, 0, cell.indentationWidth/2, height)];
         self.statusBar.backgroundColor = [mob statusColor];
