@@ -15,6 +15,11 @@
 		0A7381E718C2C05100F92E6A /* BtnRing@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A7381E518C2C05100F92E6A /* BtnRing@2x.png */; };
 		0A73829018CD415000F92E6A /* UserStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A73828F18CD415000F92E6A /* UserStorage.m */; };
 		0A73829318CD4D8B00F92E6A /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A73829218CD4D8B00F92E6A /* FriendsViewController.m */; };
+		0A73829C18CD867400F92E6A /* Groups.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A73829B18CD867400F92E6A /* Groups.m */; };
+		0A73829F18CD88E600F92E6A /* GroupInstanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A73829E18CD88E600F92E6A /* GroupInstanceViewController.m */; };
+		0A7382A218CD8BFE00F92E6A /* Friends.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7382A118CD8BFE00F92E6A /* Friends.m */; };
+		0A7382A518CD91DE00F92E6A /* Friend.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7382A418CD91DE00F92E6A /* Friend.m */; };
+		0A7382A818CD943300F92E6A /* Group.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7382A718CD943300F92E6A /* Group.m */; };
 		D201C0B418CBE3950081446C /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = D201C0B318CBE3950081446C /* UIColor+Hex.m */; };
 		D201C0B618CBE7F80081446C /* SplashStuff.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D201C0B518CBE7F80081446C /* SplashStuff.storyboard */; };
 		D201C0BA18CBE82C0081446C /* SetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D201C0B918CBE82C0081446C /* SetupViewController.m */; };
@@ -67,6 +72,16 @@
 		0A73828F18CD415000F92E6A /* UserStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserStorage.m; sourceTree = "<group>"; };
 		0A73829118CD4D8B00F92E6A /* FriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsViewController.h; sourceTree = "<group>"; };
 		0A73829218CD4D8B00F92E6A /* FriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsViewController.m; sourceTree = "<group>"; };
+		0A73829A18CD867400F92E6A /* Groups.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Groups.h; sourceTree = "<group>"; };
+		0A73829B18CD867400F92E6A /* Groups.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Groups.m; sourceTree = "<group>"; };
+		0A73829D18CD88E600F92E6A /* GroupInstanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupInstanceViewController.h; sourceTree = "<group>"; };
+		0A73829E18CD88E600F92E6A /* GroupInstanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupInstanceViewController.m; sourceTree = "<group>"; };
+		0A7382A018CD8BFE00F92E6A /* Friends.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Friends.h; sourceTree = "<group>"; };
+		0A7382A118CD8BFE00F92E6A /* Friends.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Friends.m; sourceTree = "<group>"; };
+		0A7382A318CD91DE00F92E6A /* Friend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Friend.h; sourceTree = "<group>"; };
+		0A7382A418CD91DE00F92E6A /* Friend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Friend.m; sourceTree = "<group>"; };
+		0A7382A618CD943300F92E6A /* Group.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Group.h; sourceTree = "<group>"; };
+		0A7382A718CD943300F92E6A /* Group.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Group.m; sourceTree = "<group>"; };
 		D201C0B218CBE3950081446C /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
 		D201C0B318CBE3950081446C /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
 		D201C0B518CBE7F80081446C /* SplashStuff.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SplashStuff.storyboard; sourceTree = "<group>"; };
@@ -245,6 +260,14 @@
 				D201C0C218CC537C0081446C /* User.m */,
 				0A73828E18CD415000F92E6A /* UserStorage.h */,
 				0A73828F18CD415000F92E6A /* UserStorage.m */,
+				0A73829A18CD867400F92E6A /* Groups.h */,
+				0A73829B18CD867400F92E6A /* Groups.m */,
+				0A7382A618CD943300F92E6A /* Group.h */,
+				0A7382A718CD943300F92E6A /* Group.m */,
+				0A7382A018CD8BFE00F92E6A /* Friends.h */,
+				0A7382A118CD8BFE00F92E6A /* Friends.m */,
+				0A7382A318CD91DE00F92E6A /* Friend.h */,
+				0A7382A418CD91DE00F92E6A /* Friend.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -323,6 +346,8 @@
 			children = (
 				0A73829118CD4D8B00F92E6A /* FriendsViewController.h */,
 				0A73829218CD4D8B00F92E6A /* FriendsViewController.m */,
+				0A73829D18CD88E600F92E6A /* GroupInstanceViewController.h */,
+				0A73829E18CD88E600F92E6A /* GroupInstanceViewController.m */,
 			);
 			name = Friends;
 			sourceTree = "<group>";
@@ -438,18 +463,23 @@
 				0A73829318CD4D8B00F92E6A /* FriendsViewController.m in Sources */,
 				D201C0C318CC537C0081446C /* User.m in Sources */,
 				D297660E18BDE0C300F696EB /* Mobs.m in Sources */,
+				0A7382A218CD8BFE00F92E6A /* Friends.m in Sources */,
 				0A7381CF18C2A69800F92E6A /* MobCreationViewController.m in Sources */,
 				D29765D418BC7C1900F696EB /* AppDelegate.m in Sources */,
 				D201C0C018CBEB9F0081446C /* MobSyncNavigationController.m in Sources */,
+				0A7382A818CD943300F92E6A /* Group.m in Sources */,
 				D201C0BA18CBE82C0081446C /* SetupViewController.m in Sources */,
 				D297661118BDE2B600F696EB /* ActivityTableViewCell.m in Sources */,
+				0A7382A518CD91DE00F92E6A /* Friend.m in Sources */,
 				0A7381CC18C2A68700F92E6A /* MobViewController.m in Sources */,
 				D297660818BDE03900F696EB /* ActivityTableViewController.m in Sources */,
+				0A73829F18CD88E600F92E6A /* GroupInstanceViewController.m in Sources */,
 				D297660B18BDE0B500F696EB /* Mob.m in Sources */,
 				D201C0B418CBE3950081446C /* UIColor+Hex.m in Sources */,
 				D29765D018BC7C1900F696EB /* main.m in Sources */,
 				0A73829018CD415000F92E6A /* UserStorage.m in Sources */,
 				D297661418BDEFBB00F696EB /* ActivityDetailViewController.m in Sources */,
+				0A73829C18CD867400F92E6A /* Groups.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

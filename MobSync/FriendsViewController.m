@@ -7,6 +7,7 @@
 //
 
 #import "FriendsViewController.h"
+#import "GroupInstanceViewController.h"
 
 @interface FriendsViewController ()
 
@@ -14,25 +15,48 @@
 
 @implementation FriendsViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    self.friends = [Friends sharedInstance];
+    self.groups = [Groups sharedInstance];
+    [self loadTableWithKey:@"Friends"];
 }
 
-- (void)didReceiveMemoryWarning
+- (void) viewWillAppear:(BOOL)animated
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [self.tableView reloadData];
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // If table is composed of groups, push GroupInstanceView, else do nothing
+    if ([self.friendOrGroupSwitch selectedSegmentIndex] == 1) {
+        int cellIndex = indexPath.row;
+        UIStoryboard *storyBoard = self.storyboard;
+        GroupInstanceViewController *groupInstanceViewController = [storyBoard instantiateViewControllerWithIdentifier:@"GroupVC"];
+        [groupInstanceViewController loadCurrentGroupWithIndex:cellIndex];
+        [self.navigationController pushViewController:groupInstanceViewController animated:YES];
+    }
+}
+
+- (void)loadTableWithKey:(NSString*)key
+{
+    if ([key isEqualToString:@"Friends"]) {
+        self.tableView.dataSource = self.friends;
+    } else if ([key isEqualToString:@"Groups"]) {
+        self.tableView.dataSource = self.groups;
+    }
+    [self.tableView reloadData];
+}
+
+- (IBAction)friendOrGroupSwitchWasPressed:(id)sender
+{
+    if ([self.friendOrGroupSwitch selectedSegmentIndex] == 0) {
+        [self loadTableWithKey:@"Friends"];
+    } else {
+        [self loadTableWithKey:@"Groups"];
+    }
 }
 
 @end

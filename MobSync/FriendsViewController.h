@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Friends.h"
+#import "Groups.h"
 
-@interface FriendsViewController : UIViewController
+@interface FriendsViewController : UIViewController <UITableViewDelegate>
+
+@property (strong) Friends *friends;
+@property (strong) Groups *groups;
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak) IBOutlet UISegmentedControl *friendOrGroupSwitch;
+
+- (IBAction)friendOrGroupSwitchWasPressed:(id)sender;
+- (void)loadTableWithKey:(NSString*)key;
 
 @end

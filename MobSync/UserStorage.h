@@ -7,14 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Group.h"
+#import "Groups.h"
+#import "Friend.h"
+#import "Friends.h"
 
 @interface UserStorage : NSObject
 
-+(BOOL)createInitialStorageDefaultsWithUsername:(NSString*)username;
-+(NSArray*)retrieveFriendList;
-+(NSArray*)addFriendWithUsername:(NSString*)username;
-+(NSString*)retrieveActiveUser;
-+(NSString*)setActiveUserWithUsername:(NSString*)username;
-+(void)destroyStorageDefaults;
++ (BOOL)createInitialStorageDefaultsWithUsername:(NSString*)username;
++ (Friends*)retrieveFriends;
++ (void)commitFriends:(Friends*)friends;
++ (Groups*)retrieveGroups;
++ (void)commitGroups:(Groups*)groups;
++ (NSString*)retrieveActiveUser;
++ (NSString*)setActiveUserWithUsername:(NSString*)username;
++ (void)destroyStorageDefaults;
 
 @end

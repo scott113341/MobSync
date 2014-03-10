@@ -10,47 +10,57 @@
 
 @implementation UserStorage
 
-+(BOOL)createInitialStorageDefaultsWithUsername:(NSString*)username
++ (BOOL)createInitialStorageDefaultsWithUsername:(NSString*)username
 {
     NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
-    [standardUserDefaults setObject:[NSArray array] forKey:@"friends"];
+    [standardUserDefaults setObject:[Friends init] forKey:@"friends"];
+    [standardUserDefaults setObject:[Groups init] forKey:@"groups"];
     [standardUserDefaults setObject:username forKey:@"user"];
     return YES;
 }
 
-+(NSArray*)retrieveFriendList
++ (Friends*)retrieveFriends
 {
     NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
-    return [standardUserDefaults arrayForKey:@"friends"];
+    return [standardUserDefaults objectForKey:@"friends"];
 }
 
-+(NSArray*)addFriendWithUsername:(NSString*)username
++ (void)commitFriends:(Friends*)friends
 {
     NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
-    NSMutableArray *friends = [NSMutableArray arrayWithArray:[self retrieveFriendList]];
-    [friends addObject:username];
-    [standardUserDefaults setObject:[NSArray arrayWithArray:friends] forKey:@"friends"];
-    return [NSArray arrayWithArray:friends];
+    [standardUserDefaults setObject:friends forKey:@"friends"];
 }
 
-+(NSString*)retrieveActiveUser
++ (Groups*)retrieveGroups
+{
+    NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
+    return [standardUserDefaults objectForKey:@"groups"];
+}
++ (void)commitGroups:(Groups *)groups
+{
+    NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
+    [standardUserDefaults setObject:groups forKey:@"groups"];
+}
+
++ (NSString*)retrieveActiveUser
 {
     NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
     return [standardUserDefaults stringForKey:@"user"];
 }
 
-+(NSString*)setActiveUserWithUsername:(NSString*)username
++ (NSString*)setActiveUserWithUsername:(NSString*)username
 {
     NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
     [standardUserDefaults setObject:username forKey:@"user"];
     return username;
 }
 
-+(void)destroyStorageDefaults
++ (void)destroyStorageDefaults
 {
     NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
     [standardUserDefaults removeObjectForKey:@"user"];
     [standardUserDefaults removeObjectForKey:@"friends"];
+    [standardUserDefaults removeObjectForKey:@"groups"];
 }
 
 @end

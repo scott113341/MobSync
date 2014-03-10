@@ -232,7 +232,7 @@
             </objects>
             <point key="canvasLocation" x="172" y="627"/>
         </scene>
-        <!--Friends View Controller-->
+        <!--Friends View Controller - Friends-->
         <scene sceneID="GND-0T-S0Q">
             <objects>
                 <viewController id="nVA-Qr-yt3" customClass="FriendsViewController" sceneMemberID="viewController">
@@ -245,9 +245,12 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="GBj-gl-w2T">
-                                <rect key="frame" x="0.0" y="29" width="320" height="490"/>
+                                <rect key="frame" x="0.0" y="33" width="320" height="486"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="nVA-Qr-yt3" id="yPH-hE-jaK"/>
+                                </connections>
                             </tableView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="G1h-hN-DSX">
                                 <rect key="frame" x="-5" y="64" width="331" height="29"/>
@@ -257,15 +260,42 @@
                                     <segment title="Groups"/>
                                 </segments>
                                 <color key="tintColor" red="0.90588241815567017" green="0.29411765933036804" blue="0.23529413342475891" alpha="1" colorSpace="deviceRGB"/>
+                                <connections>
+                                    <action selector="friendOrGroupSwitchWasPressed:" destination="nVA-Qr-yt3" eventType="valueChanged" id="6FQ-z4-a1I"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="3dc-2h-oW7"/>
+                    <navigationItem key="navigationItem" title="Friends" id="3dc-2h-oW7"/>
+                    <connections>
+                        <outlet property="friendOrGroupSwitch" destination="G1h-hN-DSX" id="mxB-Z8-God"/>
+                        <outlet property="tableView" destination="GBj-gl-w2T" id="vZj-U4-S48"/>
+                        <segue destination="zl3-f0-Lif" kind="push" id="xBL-aO-Gbr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="owO-Ps-tBx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="706" y="627"/>
+        </scene>
+        <!--Group Instance View Controller-->
+        <scene sceneID="LnZ-V8-ICk">
+            <objects>
+                <viewController storyboardIdentifier="GroupVC" id="zl3-f0-Lif" customClass="GroupInstanceViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="opa-V8-QbY"/>
+                        <viewControllerLayoutGuide type="bottom" id="brj-aM-TPF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sfH-hP-7Nj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="RTw-5K-nwU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ukq-Nq-kmu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1221" y="627"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Xh8-3O-MD4">
