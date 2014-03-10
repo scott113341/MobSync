@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "User.h"
+#import "UserStorage.h"
 
 @implementation AppDelegate
 
@@ -17,9 +18,6 @@
     
     User *user = [User sharedInstance];
     user.device_id = @"nodeviceid";
-    
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSLog(@"default user %@", [defaults objectForKey:@"user"]);
     
     return YES;
 }

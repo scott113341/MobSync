@@ -15,6 +15,6 @@
 
 +(id)sharedInstance;
 
--(void)create;
+-(BOOL)create;
 
 @end
