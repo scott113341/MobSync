@@ -13,6 +13,7 @@
 		0A7381D318C2A6F400F92E6A /* MobBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A7381D118C2A6F400F92E6A /* MobBtn@2x.png */; };
 		0A7381E618C2C05100F92E6A /* BtnRing.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A7381E418C2C05100F92E6A /* BtnRing.png */; };
 		0A7381E718C2C05100F92E6A /* BtnRing@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A7381E518C2C05100F92E6A /* BtnRing@2x.png */; };
+		0A73829018CD415000F92E6A /* UserStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A73828F18CD415000F92E6A /* UserStorage.m */; };
 		D201C0B418CBE3950081446C /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = D201C0B318CBE3950081446C /* UIColor+Hex.m */; };
 		D201C0B618CBE7F80081446C /* SplashStuff.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D201C0B518CBE7F80081446C /* SplashStuff.storyboard */; };
 		D201C0BA18CBE82C0081446C /* SetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D201C0B918CBE82C0081446C /* SetupViewController.m */; };
@@ -61,6 +62,8 @@
 		0A7381D118C2A6F400F92E6A /* MobBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MobBtn@2x.png"; sourceTree = "<group>"; };
 		0A7381E418C2C05100F92E6A /* BtnRing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BtnRing.png; sourceTree = "<group>"; };
 		0A7381E518C2C05100F92E6A /* BtnRing@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BtnRing@2x.png"; sourceTree = "<group>"; };
+		0A73828E18CD415000F92E6A /* UserStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserStorage.h; sourceTree = "<group>"; };
+		0A73828F18CD415000F92E6A /* UserStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserStorage.m; sourceTree = "<group>"; };
 		D201C0B218CBE3950081446C /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
 		D201C0B318CBE3950081446C /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
 		D201C0B518CBE7F80081446C /* SplashStuff.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SplashStuff.storyboard; sourceTree = "<group>"; };
@@ -237,6 +240,8 @@
 				D297660A18BDE0B500F696EB /* Mob.m */,
 				D201C0C118CC537C0081446C /* User.h */,
 				D201C0C218CC537C0081446C /* User.m */,
+				0A73828E18CD415000F92E6A /* UserStorage.h */,
+				0A73828F18CD415000F92E6A /* UserStorage.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -437,6 +442,7 @@
 				D297660B18BDE0B500F696EB /* Mob.m in Sources */,
 				D201C0B418CBE3950081446C /* UIColor+Hex.m in Sources */,
 				D29765D018BC7C1900F696EB /* main.m in Sources */,
+				0A73829018CD415000F92E6A /* UserStorage.m in Sources */,
 				D297661418BDEFBB00F696EB /* ActivityDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

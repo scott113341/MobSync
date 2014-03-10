@@ -14,8 +14,9 @@
 @end
 
 @implementation MobViewController
-
-UIImageView *buttonRing;
+{
+    UIImageView *buttonRing;
+}
 
 - (IBAction)mobButtonWasPressed:(id)sender
 {
