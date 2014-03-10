@@ -15,17 +15,6 @@
 
 @implementation SetupViewController
 
--(void)viewDidLoad
-{
-    [super viewDidLoad];
-    
-    // if default user already created, skip setup
-    self.defaults = [NSUserDefaults standardUserDefaults];
-    if ([self.defaults objectForKey:@"user"] != nil) {
-        [self dismiss];
-    }
-}
-
 -(void)continueButtonWasPressed:(id)sender
 {
     [self.nameTextField resignFirstResponder];
@@ -46,9 +35,7 @@
 
 -(void)dismiss
 {
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
-    UIViewController *view = [storyboard instantiateViewControllerWithIdentifier:@"MSTabBarController"];
-    [self presentViewController:view animated:YES completion:nil];
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end
