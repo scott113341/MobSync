@@ -29,4 +29,9 @@
     return response;
 }
 
++(NSDictionary *)convertDataToJSON:(NSData *)data
+{
+    return [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+}
+
 @end

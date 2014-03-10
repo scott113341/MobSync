@@ -11,5 +11,6 @@
 @interface MobSyncServer : NSObject
 
 +(NSData *)requestURI:(NSString *)uri HTTPMethod:(NSString *)method HTTPBody:(NSString*)body;
++(NSDictionary *)convertDataToJSON:(NSData *)data;
 
 @end

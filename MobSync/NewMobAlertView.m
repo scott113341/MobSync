@@ -15,7 +15,6 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.title = @"New MobSync!";
-        self.message = @"10 of your friends are mobbing to Taco Bell!";
         
         [self addButtonWithTitle:@"Decline"];
         [self addButtonWithTitle:@"View Details"];

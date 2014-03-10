@@ -8,6 +8,7 @@
 
 #import "Mob.h"
 #import "UIColor+Hex.h"
+#import "MobSyncServer.h"
 
 @implementation Mob
 
@@ -16,6 +17,17 @@
     if (self = [super init]) {
         self.name = name;
         self.status = status;
+    }
+    return self;
+}
+
+-(id)initWithServerData:(NSData *)data
+{
+    if (self = [super init]) {
+        NSDictionary *mob = [MobSyncServer convertDataToJSON:data];
+        
+        self.name = [mob objectForKey:@"destination"];
+        self.status = 1;
     }
     return self;
 }

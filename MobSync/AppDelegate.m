@@ -10,6 +10,7 @@
 #import "User.h"
 #import "UserStorage.h"
 #import "NewMobAlertView.h"
+#import "MobSyncViewController.h"
 
 @implementation AppDelegate
 
@@ -36,11 +37,11 @@
 -(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
 {
     NSLog(@"got apn: %@", userInfo);
-    
-    NSLog(@"%@", [userInfo objectForKey:@"mob"]);
+    self.notificationData = userInfo;
     
     NewMobAlertView *alert = [[NewMobAlertView alloc] init];
     alert.delegate = self;
+    alert.message = [userInfo valueForKeyPath:@"aps.alert"];
     [alert show];
 }
 
@@ -50,7 +51,8 @@
     
     if (buttonIndex == 1) {
         UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"SplashStuff" bundle:nil];
-        UIViewController *mobSyncViewController = [mainStoryboard instantiateViewControllerWithIdentifier:@"MobSyncViewController"];
+        MobSyncViewController *mobSyncViewController = [mainStoryboard instantiateViewControllerWithIdentifier:@"MobSyncViewController"];
+        mobSyncViewController.notificationData = self.notificationData;
         [self.window.rootViewController presentViewController:mobSyncViewController animated:YES completion:nil];
     }
 }

@@ -12,6 +12,8 @@
 
 -(id)initMobWithName:(NSString *)name andStatus:(NSInteger)status;
 
+-(id)initWithServerData:(NSData *)data;
+
 @property (strong) NSString *name;
 @property NSInteger status;
 
