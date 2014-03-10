@@ -175,31 +175,6 @@
             </objects>
             <point key="canvasLocation" x="172" y="-125"/>
         </scene>
-        <!--Table View Controller - Friends-->
-        <scene sceneID="IjQ-Sx-uB0">
-            <objects>
-                <tableViewController id="nXl-QU-XCS" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="a8I-nA-ACE">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="jDK-EX-esn">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jDK-EX-esn" id="Eaz-aM-S0c">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Friends" id="iV7-wJ-gmh"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0Fq-rb-hno" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="706" y="627"/>
-        </scene>
         <!--Table View Controller - Settings-->
         <scene sceneID="iJh-qL-IaW">
             <objects>
@@ -250,12 +225,47 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="nXl-QU-XCS" kind="relationship" relationship="rootViewController" id="2Wy-jE-tAg"/>
+                        <segue destination="nVA-Qr-yt3" kind="relationship" relationship="rootViewController" id="vS2-gU-E8B"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9rq-h9-qkw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="172" y="627"/>
+        </scene>
+        <!--Friends View Controller-->
+        <scene sceneID="GND-0T-S0Q">
+            <objects>
+                <viewController id="nVA-Qr-yt3" customClass="FriendsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9kJ-Xy-md8"/>
+                        <viewControllerLayoutGuide type="bottom" id="cY4-JG-0cx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5xD-JJ-h5v">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="GBj-gl-w2T">
+                                <rect key="frame" x="0.0" y="29" width="320" height="490"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="G1h-hN-DSX">
+                                <rect key="frame" x="-5" y="64" width="331" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Friends"/>
+                                    <segment title="Groups"/>
+                                </segments>
+                                <color key="tintColor" red="0.90588241815567017" green="0.29411765933036804" blue="0.23529413342475891" alpha="1" colorSpace="deviceRGB"/>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="3dc-2h-oW7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="owO-Ps-tBx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="706" y="627"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Xh8-3O-MD4">
@@ -286,6 +296,7 @@
         <image name="Recents.png" width="24" height="24"/>
         <image name="Syncing.png" width="31" height="24"/>
     </resources>
+    <color key="tintColor" red="0.90588241815567017" green="0.29411765933036804" blue="0.23529413342475891" alpha="1" colorSpace="deviceRGB"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
