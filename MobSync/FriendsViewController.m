@@ -8,6 +8,7 @@
 
 #import "FriendsViewController.h"
 #import "GroupInstanceViewController.h"
+#import "FriendCreationViewController.h"
 
 @interface FriendsViewController ()
 
@@ -20,6 +21,9 @@
     [super viewDidLoad];
     self.friends = [Friends sharedInstance];
     self.groups = [Groups sharedInstance];
+    
+    // remove auto inset of table view cells
+    self.automaticallyAdjustsScrollViewInsets = NO;
     [self loadTableWithKey:@"Friends"];
 }
 
@@ -28,6 +32,8 @@
     [self.tableView reloadData];
 }
 
+
+// Table methods
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // If table is composed of groups, push GroupInstanceView, else do nothing
@@ -40,12 +46,16 @@
     }
 }
 
+// End table methods
+
 - (void)loadTableWithKey:(NSString*)key
 {
     if ([key isEqualToString:@"Friends"]) {
         self.tableView.dataSource = self.friends;
+        self.tableView.allowsSelection = NO;
     } else if ([key isEqualToString:@"Groups"]) {
         self.tableView.dataSource = self.groups;
+        self.tableView.allowsSelection = YES;
     }
     [self.tableView reloadData];
 }
@@ -57,6 +67,14 @@
     } else {
         [self loadTableWithKey:@"Groups"];
     }
+}
+
+- (IBAction)addButtonWasPressed:(id)sender
+{
+    UIStoryboard *storyBoard = self.storyboard;
+    FriendCreationViewController *friendCreationViewController = [storyBoard instantiateViewControllerWithIdentifier:@"FriendCreationVC"];
+    friendCreationViewController.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+    [self presentViewController:friendCreationViewController animated:YES completion:nil];
 }
 
 @end

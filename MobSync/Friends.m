@@ -17,10 +17,15 @@
     if (self = [super init]) {
         self.friends = [NSMutableArray array];
         
-        [self.friends addObject:[[Friend alloc] initWithUsername:@"the badger" AndName:@"John Hammerpenis"]];
-        [self.friends addObject:[[Friend alloc] initWithUsername:@"bobtheslayer" AndName:@"Scott Hardy"]];
+        [self.friends addObject:[[Friend alloc] initWithUsername:@"the_badger" AndName:@"John Leshwitz"]];
+        [self.friends addObject:[[Friend alloc] initWithUsername:@"BobTheSlayer" AndName:@"Scott Hardy"]];
     }
     return self;
+}
+
+- (void)addFriend:(Friend*)friend
+{
+    [self.friends addObject:friend];
 }
 
 - (Friend*)friendAtIndex:(int)index
@@ -52,6 +57,16 @@
     
     return newCell;
 }
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
+                                            forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self.friends removeObjectAtIndex:indexPath.row];
+    [tableView deleteRowsAtIndexPaths:@[indexPath]
+                     withRowAnimation:UITableViewRowAnimationTop];
+    // remove from user storage
+}
+// end table view protocol methods
 
 + (id)sharedInstance
 {

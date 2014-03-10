@@ -18,12 +18,12 @@
     //return [UserStorage retrieveGroups];
     if (self = [super init]) {
         self.groups = [NSMutableArray array];
-        NSArray *onebro = [NSArray arrayWithObjects:@"john", nil];
-        NSArray *bros = [NSArray arrayWithObjects:@"jeremy", @"poopy", nil];
-        NSArray *morebros = [NSArray arrayWithObjects:@"matt", @"scott", @"snoop dog", nil];
-        [self.groups addObject:[[Group alloc] initWithName:@"Loner" AndMembersList:onebro]];
+        NSArray *onebro = [NSArray arrayWithObjects:@"bananapants92", nil];
+        NSArray *bros = [NSArray arrayWithObjects:@"JeremyJJ", @"WahooNews", nil];
+        NSArray *morebros = [NSArray arrayWithObjects:@"LeoplurodonX", @"Scotty mac", @"snoop dog", nil];
+        [self.groups addObject:[[Group alloc] initWithName:@"Neighbor" AndMembersList:onebro]];
         [self.groups addObject:[[Group alloc] initWithName:@"Good Friends" AndMembersList:bros]];
-        [self.groups addObject:[[Group alloc] initWithName:@"Other guys" AndMembersList:morebros]];
+        [self.groups addObject:[[Group alloc] initWithName:@"Roommates" AndMembersList:morebros]];
     }
     return self;
 }
@@ -75,6 +75,16 @@
     
     return newCell;
 }
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
+                                            forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self.groups removeObjectAtIndex:indexPath.row];
+    [tableView deleteRowsAtIndexPaths:@[indexPath]
+                     withRowAnimation:UITableViewRowAnimationTop];
+    // remove from user storage
+}
+// End table view protocol methods
 
 + (id)sharedInstance
 {

@@ -18,7 +18,9 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak) IBOutlet UISegmentedControl *friendOrGroupSwitch;
 
-- (IBAction)friendOrGroupSwitchWasPressed:(id)sender;
 - (void)loadTableWithKey:(NSString*)key;
+
+- (IBAction)friendOrGroupSwitchWasPressed:(id)sender;
+- (IBAction)addButtonWasPressed:(id)sender;
 
 @end

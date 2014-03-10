@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A2CECBB18CE16DE0044E20C /* FriendCreationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2CECBA18CE16DE0044E20C /* FriendCreationViewController.m */; };
 		0A7381CC18C2A68700F92E6A /* MobViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7381CB18C2A68700F92E6A /* MobViewController.m */; };
 		0A7381CF18C2A69800F92E6A /* MobCreationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7381CE18C2A69800F92E6A /* MobCreationViewController.m */; };
 		0A7381D218C2A6F400F92E6A /* MobBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A7381D018C2A6F400F92E6A /* MobBtn.png */; };
@@ -60,6 +61,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A2CECB918CE16DE0044E20C /* FriendCreationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendCreationViewController.h; sourceTree = "<group>"; };
+		0A2CECBA18CE16DE0044E20C /* FriendCreationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendCreationViewController.m; sourceTree = "<group>"; };
 		0A7381CA18C2A68700F92E6A /* MobViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobViewController.h; sourceTree = "<group>"; };
 		0A7381CB18C2A68700F92E6A /* MobViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobViewController.m; sourceTree = "<group>"; };
 		0A7381CD18C2A69800F92E6A /* MobCreationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobCreationViewController.h; sourceTree = "<group>"; };
@@ -348,6 +351,8 @@
 				0A73829218CD4D8B00F92E6A /* FriendsViewController.m */,
 				0A73829D18CD88E600F92E6A /* GroupInstanceViewController.h */,
 				0A73829E18CD88E600F92E6A /* GroupInstanceViewController.m */,
+				0A2CECB918CE16DE0044E20C /* FriendCreationViewController.h */,
+				0A2CECBA18CE16DE0044E20C /* FriendCreationViewController.m */,
 			);
 			name = Friends;
 			sourceTree = "<group>";
@@ -473,6 +478,7 @@
 				0A7382A518CD91DE00F92E6A /* Friend.m in Sources */,
 				0A7381CC18C2A68700F92E6A /* MobViewController.m in Sources */,
 				D297660818BDE03900F696EB /* ActivityTableViewController.m in Sources */,
+				0A2CECBB18CE16DE0044E20C /* FriendCreationViewController.m in Sources */,
 				0A73829F18CD88E600F92E6A /* GroupInstanceViewController.m in Sources */,
 				D297660B18BDE0B500F696EB /* Mob.m in Sources */,
 				D201C0B418CBE3950081446C /* UIColor+Hex.m in Sources */,

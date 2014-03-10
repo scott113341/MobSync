@@ -13,6 +13,7 @@
 
 @property (strong) NSMutableArray *friends;
 
+- (void)addFriend:(Friend*)friend;
 - (Friend*)friendAtIndex:(int)index;
 
 + (id)sharedInstance;
