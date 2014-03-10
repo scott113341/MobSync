@@ -52,11 +52,21 @@ UIImageView *buttonRing;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     // Add observer for when animations need to be restarted
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(refreshButtonAnimation)
                                                  name:@"RelaunchAnimations"
                                                object:nil];
+    
+    // show setupviewcontroller if no default user loaded
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    //[defaults removeObjectForKey:@"user"];
+    if ([defaults objectForKey:@"user"] == nil) {
+        UIStoryboard *splashStuff = [UIStoryboard storyboardWithName:@"SplashStuff" bundle:nil];
+        UIViewController *setupViewController = [splashStuff instantiateViewControllerWithIdentifier:@"SetupViewController"];
+        [self presentViewController:setupViewController animated:YES completion:nil];
+    }
 }
 
 @end
