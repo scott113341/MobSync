@@ -18,6 +18,11 @@
     User *user = [User sharedInstance];
     user.device_id = @"nodeviceid";
     
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSLog(@"default user %@", [defaults objectForKey:@"user"]);
+    
+    NSLog(@"%@", [self.window.rootViewController description]);
+    
     return YES;
 }
 

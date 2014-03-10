@@ -14,6 +14,9 @@
 
 -(IBAction)continueButtonWasPressed:(id)sender;
 
+@property (weak) NSUserDefaults *defaults;
+
 -(void)createUser;
+-(void)dismiss;
 
 @end
