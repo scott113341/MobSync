@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "User.h"
 #import "UserStorage.h"
+#import "NewMobAlertView.h"
+#import "MobSyncViewController.h"
 
 @implementation AppDelegate
 
@@ -16,8 +18,12 @@
 {
     [[UIApplication sharedApplication] registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeAlert)];
     
+    // set device_id to placeholder for simulator runs
     User *user = [User sharedInstance];
     user.device_id = @"nodeviceid";
+    
+    // uncomment to reset default user
+    //[UserStorage destroyStorageDefaults];
     
     return YES;
 }
@@ -30,7 +36,25 @@
 
 -(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
 {
-    NSLog(@"%@", userInfo);
+    NSLog(@"got apn: %@", userInfo);
+    self.notificationData = userInfo;
+    
+    NewMobAlertView *alert = [[NewMobAlertView alloc] init];
+    alert.delegate = self;
+    alert.message = [userInfo valueForKeyPath:@"aps.alert"];
+    [alert show];
+}
+
+-(void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    NSLog(@"%i", buttonIndex);
+    
+    if (buttonIndex == 1) {
+        UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"SplashStuff" bundle:nil];
+        MobSyncViewController *mobSyncViewController = [mainStoryboard instantiateViewControllerWithIdentifier:@"MobSyncViewController"];
+        mobSyncViewController.notificationData = self.notificationData;
+        [self.window.rootViewController presentViewController:mobSyncViewController animated:YES completion:nil];
+    }
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
