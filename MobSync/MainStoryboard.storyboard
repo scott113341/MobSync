@@ -128,7 +128,7 @@
                     <navigationItem key="navigationItem" title="Create Mob" id="f0a-Of-EwW"/>
                     <connections>
                         <outlet property="destination" destination="LRq-Ij-Jux" id="Dvd-0F-i1m"/>
-                        <segue destination="owM-cb-NUV" kind="push" id="CHD-NU-E0s"/>
+                        <segue destination="owM-cb-NUV" kind="push" identifier="MobCreationFriendSegue" id="CHD-NU-E0s"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Ok-NR-RSd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -143,16 +143,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="asdf" id="5ab-EG-Jql">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5ab-EG-Jql" id="u5W-O2-KYd">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
                         <connections>
                             <outlet property="delegate" destination="owM-cb-NUV" id="KgD-Iy-tUH"/>
                         </connections>
@@ -174,19 +164,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="PU0-ll-PbE">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PU0-ll-PbE" id="3m3-cv-M5L">
-                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="TtA-xg-u0I" kind="push" id="KFs-2H-rft"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
                     </tableView>
                     <navigationItem key="navigationItem" title="Recent Mobs" id="8db-ZJ-g4m"/>
                     <connections>
@@ -206,7 +183,7 @@
                         <viewControllerLayoutGuide type="bottom" id="YEE-Vt-sjs"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ZY1-LH-pM4">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -240,16 +217,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="iao-sl-G61">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iao-sl-G61" id="kGj-Fj-wmt">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
                     </tableView>
                     <navigationItem key="navigationItem" title="Settings" id="yjz-cD-vSt"/>
                 </tableViewController>
@@ -335,7 +302,7 @@
                         <outlet property="friendOrGroupSwitch" destination="G1h-hN-DSX" id="mxB-Z8-God"/>
                         <outlet property="tableView" destination="GBj-gl-w2T" id="vZj-U4-S48"/>
                         <segue destination="zl3-f0-Lif" kind="push" identifier="GroupInstanceSegue" id="xBL-aO-Gbr"/>
-                        <segue destination="ewU-aK-0Cd" kind="modal" id="qQL-aw-wMD"/>
+                        <segue destination="ewU-aK-0Cd" kind="modal" identifier="FriendCreationSegue" id="qQL-aw-wMD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="owO-Ps-tBx" userLabel="First Responder" sceneMemberID="firstResponder"/>
