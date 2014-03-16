@@ -13,8 +13,8 @@
 + (BOOL)createInitialStorageDefaultsWithUsername:(NSString*)username
 {
     NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
-    [standardUserDefaults setObject:[Friends init] forKey:@"friends"];
-    [standardUserDefaults setObject:[Groups init] forKey:@"groups"];
+    //[standardUserDefaults setObject:[Friends init] forKey:@"friends"];
+    //[standardUserDefaults setObject:[Groups init] forKey:@"groups"];
     [standardUserDefaults setObject:username forKey:@"user"];
     return YES;
 }

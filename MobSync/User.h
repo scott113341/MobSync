@@ -10,6 +10,8 @@
 
 @interface User : NSObject
 
+@property NSInteger id;
+@property (strong) NSString *username;
 @property (strong) NSString *name;
 @property (strong) NSString *device_id;
 

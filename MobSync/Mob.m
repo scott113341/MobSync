@@ -12,11 +12,13 @@
 
 @implementation Mob
 
--(id)initMobWithName:(NSString *)name andStatus:(NSInteger)status
+-(id)init
 {
     if (self = [super init]) {
-        self.name = name;
-        self.status = status;
+        self.name = [[NSString alloc] init];
+        self.status = 0;
+        self.date = @"3/10/2014";
+        self.usernameArray = [[NSMutableArray alloc] init];
     }
     return self;
 }

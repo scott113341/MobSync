@@ -10,13 +10,12 @@
 
 @interface Mob : NSObject
 
--(id)initMobWithName:(NSString *)name andStatus:(NSInteger)status;
-
 -(id)initWithServerData:(NSData *)data;
 
 @property (strong) NSString *name;
 @property NSInteger status;
 @property (strong) NSString *date;
+@property (strong) NSMutableArray *usernameArray;
 
 -(UIColor *)statusColor;
 

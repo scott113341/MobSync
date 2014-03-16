@@ -18,14 +18,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeAlert)];
+    [application registerForRemoteNotificationTypes:(UIRemoteNotificationTypeAlert)];
     
     // set device_id to placeholder for simulator runs
     User *user = [User sharedInstance];
     user.device_id = @"nodeviceid";
     
     // uncomment to reset default user
-    //[UserStorage destroyStorageDefaults];
+    [UserStorage destroyStorageDefaults];
     
     return YES;
 }
@@ -34,6 +34,8 @@
 {
     User *user = [User sharedInstance];
     user.device_id = [deviceToken description];
+    
+    NSLog(@"%@", user.device_id);
 }
 
 -(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo

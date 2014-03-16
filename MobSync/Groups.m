@@ -20,7 +20,7 @@
         self.groups = [NSMutableArray array];
         NSArray *onebro = [NSArray arrayWithObjects:@"bananapants92", nil];
         NSArray *bros = [NSArray arrayWithObjects:@"JeremyJJ", @"WahooNews", nil];
-        NSArray *morebros = [NSArray arrayWithObjects:@"LeoplurodonX", @"Scotty mac", @"snoop dog", nil];
+        NSArray *morebros = [NSArray arrayWithObjects:@"LeoplurodonX", @"Scottymac", @"snoopdog", nil];
         [self.groups addObject:[[Group alloc] initWithName:@"Neighbor" AndMembersList:onebro]];
         [self.groups addObject:[[Group alloc] initWithName:@"Good Friends" AndMembersList:bros]];
         [self.groups addObject:[[Group alloc] initWithName:@"Roommates" AndMembersList:morebros]];

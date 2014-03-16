@@ -17,8 +17,8 @@
     if (self = [super init]) {
         self.friends = [NSMutableArray array];
         
-        [self.friends addObject:[[Friend alloc] initWithUsername:@"the_badger" AndName:@"John Leshwitz"]];
-        [self.friends addObject:[[Friend alloc] initWithUsername:@"BobTheSlayer" AndName:@"Scott Hardy"]];
+        [self.friends addObject:[[Friend alloc] initWithUsername:@"scott123" AndName:@"Scott Hardy"]];
+        [self.friends addObject:[[Friend alloc] initWithUsername:@"matt123" AndName:@"Matt Medal"]];
     }
     return self;
 }

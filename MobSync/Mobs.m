@@ -27,14 +27,16 @@
 
 -(void)save
 {
-    [self.defaults setObject:[self all] forKey:@"mobs"];
+    //[self.defaults setObject:[self all] forKey:@"mobs"];
 }
 
 -(void)load
 {
+    /*
     if ([self.defaults objectForKey:@"mobs"] != nil) {
         self.all = [self.defaults objectForKey:@"mobs"];
     }
+     */
 }
 
 +(id)sharedInstance

@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Mobs.h"
+#import "Mob.h"
 
 @interface MobCreationViewController : UIViewController
+
+@property (weak) IBOutlet UITextField *destination;
+
+-(IBAction)didSelectPickFriends:(id)sender;
+-(IBAction)didSelectDone:(id)sender;
+-(IBAction)hideKeyboard:(id)sender;
+
+@property (strong) Mob *mob;
+@property (strong) NSMutableArray *usernames;
 
 @end

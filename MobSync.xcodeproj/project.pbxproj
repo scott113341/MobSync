@@ -26,6 +26,7 @@
 		D201C0BA18CBE82C0081446C /* SetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D201C0B918CBE82C0081446C /* SetupViewController.m */; };
 		D201C0C018CBEB9F0081446C /* MobSyncNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D201C0BF18CBEB9F0081446C /* MobSyncNavigationController.m */; };
 		D201C0C318CC537C0081446C /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = D201C0C218CC537C0081446C /* User.m */; };
+		D24D7E3018CE66B7006EF4D0 /* ChooseFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D24D7E2F18CE66B7006EF4D0 /* ChooseFriendsViewController.m */; };
 		D29765C418BC7C1900F696EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D29765C318BC7C1900F696EB /* Foundation.framework */; };
 		D29765C618BC7C1900F696EB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D29765C518BC7C1900F696EB /* CoreGraphics.framework */; };
 		D29765C818BC7C1900F696EB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D29765C718BC7C1900F696EB /* UIKit.framework */; };
@@ -97,6 +98,8 @@
 		D201C0BF18CBEB9F0081446C /* MobSyncNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobSyncNavigationController.m; sourceTree = "<group>"; };
 		D201C0C118CC537C0081446C /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		D201C0C218CC537C0081446C /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		D24D7E2E18CE66B7006EF4D0 /* ChooseFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseFriendsViewController.h; sourceTree = "<group>"; };
+		D24D7E2F18CE66B7006EF4D0 /* ChooseFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseFriendsViewController.m; sourceTree = "<group>"; };
 		D29765C018BC7C1900F696EB /* MobSync.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobSync.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D29765C318BC7C1900F696EB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D29765C518BC7C1900F696EB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -353,6 +356,8 @@
 				0A7381CB18C2A68700F92E6A /* MobViewController.m */,
 				0A7381CD18C2A69800F92E6A /* MobCreationViewController.h */,
 				0A7381CE18C2A69800F92E6A /* MobCreationViewController.m */,
+				D24D7E2E18CE66B7006EF4D0 /* ChooseFriendsViewController.h */,
+				D24D7E2F18CE66B7006EF4D0 /* ChooseFriendsViewController.m */,
 				D2A2999F18CD536A0085D09D /* MobSyncViewController.h */,
 				D2A299A018CD536A0085D09D /* MobSyncViewController.m */,
 			);
@@ -493,6 +498,7 @@
 				0A7382A518CD91DE00F92E6A /* Friend.m in Sources */,
 				D2A299A418CD86200085D09D /* NewMobAlertView.m in Sources */,
 				0A7381CC18C2A68700F92E6A /* MobViewController.m in Sources */,
+				D24D7E3018CE66B7006EF4D0 /* ChooseFriendsViewController.m in Sources */,
 				D297660818BDE03900F696EB /* ActivityTableViewController.m in Sources */,
 				0A2CECBB18CE16DE0044E20C /* FriendCreationViewController.m in Sources */,
 				0A73829F18CD88E600F92E6A /* GroupInstanceViewController.m in Sources */,
@@ -629,7 +635,7 @@
 				INFOPLIST_FILE = "MobSync/MobSync-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "D3591597-CE0A-4F79-A72C-7DB45A6D1718";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -646,7 +652,7 @@
 				INFOPLIST_FILE = "MobSync/MobSync-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "D3591597-CE0A-4F79-A72C-7DB45A6D1718";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
