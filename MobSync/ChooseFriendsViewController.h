@@ -11,7 +11,7 @@
 
 @interface ChooseFriendsViewController : UITableViewController
 
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UITableView *friendsTableView;
 
 @property (strong) Mob *mob;
 

@@ -39,7 +39,7 @@
     // get mob data from server
     NSString *uri = @"/mobs.json";
     NSString *body = [NSString stringWithFormat:@"user_id=3&user_idz=3,1,2&destination=%@", self.destination.text];
-    NSData *mob = [MobSyncServer requestURI:uri HTTPMethod:@"POST" HTTPBody:body];
+    [MobSyncServer requestURI:uri HTTPMethod:@"POST" HTTPBody:body];
     
     // create new local mob model
     Mobs *mobs = [Mobs sharedInstance];

@@ -50,7 +50,7 @@
 
 -(void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
 {
-    NSLog(@"%i", buttonIndex);
+    NSLog(@"%li", (long)buttonIndex);
     
     NSMutableArray *allMobs = [[Mobs sharedInstance] all];
     Mob *mob = [allMobs objectAtIndex:[allMobs count]-1];

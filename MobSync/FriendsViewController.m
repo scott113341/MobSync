@@ -38,7 +38,7 @@
 {
     // If table is composed of groups, push GroupInstanceView, else do nothing
     if ([self.friendOrGroupSwitch selectedSegmentIndex] == 1) {
-        int cellIndex = indexPath.row;
+        int cellIndex = (int)indexPath.row;
         UIStoryboard *storyBoard = self.storyboard;
         GroupInstanceViewController *groupInstanceViewController = [storyBoard instantiateViewControllerWithIdentifier:@"GroupVC"];
         [groupInstanceViewController loadCurrentGroupWithIndex:cellIndex];

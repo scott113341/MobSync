@@ -19,7 +19,7 @@
 {
     [super viewDidLoad];
 
-    self.tableView.dataSource = [Friends sharedInstance];
+    self.friendsTableView.dataSource = [Friends sharedInstance];
     
     NSLog(@"%@", self.mob.usernameArray);
 }

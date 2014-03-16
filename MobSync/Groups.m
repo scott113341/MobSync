@@ -41,7 +41,7 @@
 
 - (int)count
 {
-    return [self.groups count];
+    return (int)[self.groups count];
 }
 
 // UITableViewDataSource protocol methods
