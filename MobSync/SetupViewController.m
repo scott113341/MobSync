@@ -7,13 +7,64 @@
 //
 
 #import "SetupViewController.h"
+#import "User2.h"
 #import "User.h"
 
-@interface SetupViewController ()
+@interface SetupViewController () <NSFetchedResultsControllerDelegate>
+
+@property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
 
 @end
 
 @implementation SetupViewController
+
+-(void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    RKLogConfigureByName("RestKit/Network", RKLogLevelTrace);
+    
+    // fetch /users.json
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"User"];
+    NSSortDescriptor *descriptor = [NSSortDescriptor sortDescriptorWithKey:@"userID" ascending:NO];
+    fetchRequest.sortDescriptors = @[descriptor];
+    NSError *error = nil;
+    self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
+                                                                        managedObjectContext:[RKManagedObjectStore defaultStore].mainQueueManagedObjectContext
+                                                                          sectionNameKeyPath:nil
+                                                                                   cacheName:nil];
+    [self.fetchedResultsController setDelegate:self];
+    BOOL fetchSuccessful = [self.fetchedResultsController performFetch:&error];
+    NSAssert([[self.fetchedResultsController fetchedObjects] count], @"Seeding didn't work...");
+    if (! fetchSuccessful) {
+        NSLog(@"error!!!!!!!!!!!!");
+    }
+    
+    [self loadData];
+}
+
+-(void)loadData
+{
+    [[RKObjectManager sharedManager] getObjectsAtPath:@"/users.json" parameters:nil success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+        RKLogInfo(@"Load complete");
+    } failure:^(RKObjectRequestOperation *operation, NSError *error) {
+        RKLogError(@"Load failed with error: %@", error);
+    }];
+}
+
+#pragma mark NSFetchedResultsControllerDelegate methods
+
+- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller
+{
+    NSLog(@"controllerdidchangecontent");
+}
+
+
+
+
+
+
+
 
 -(void)continueButtonWasPressed:(id)sender
 {

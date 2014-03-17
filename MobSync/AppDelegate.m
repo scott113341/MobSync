@@ -14,6 +14,9 @@
 #import "Mobs.h"
 #import "MobSyncServer.h"
 
+#import <RestKit/CoreData.h>
+#import <RestKit/RestKit.h>
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -27,8 +30,85 @@
     // uncomment to reset default user
     [UserStorage destroyStorageDefaults];
     
+    // start restkit
+    [self initializeRestKit];
+    
     return YES;
 }
+
+-(void)initializeRestKit
+{
+    // initialize objectmanager
+    NSURL *baseURL = [NSURL URLWithString:@"http://26c634e3.ngrok.com"];
+    RKObjectManager *objectManager = [RKObjectManager managerWithBaseURL:baseURL];
+    
+    // initialize managed object store
+    NSManagedObjectModel *managedObjectModel = [NSManagedObjectModel mergedModelFromBundles:nil];
+    RKManagedObjectStore *managedObjectStore = [[RKManagedObjectStore alloc] initWithManagedObjectModel:managedObjectModel];
+    objectManager.managedObjectStore = managedObjectStore;
+    
+    // user object mapping
+    RKEntityMapping *userMapping = [RKEntityMapping mappingForEntityForName:@"User" inManagedObjectStore:managedObjectStore];
+    userMapping.identificationAttributes = @[ @"userID" ];
+    [userMapping addAttributeMappingsFromDictionary:@{
+                                                        @"id": @"userID",
+                                                        @"username": @"username",
+                                                        @"password": @"password",
+                                                        @"name": @"name",
+                                                        @"device_id": @"deviceID"
+                                                      }];
+    RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:userMapping
+                                                                                            method:RKRequestMethodGET
+                                                                                       pathPattern:nil
+                                                                                           keyPath:nil
+                                                                                       statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
+    [objectManager addResponseDescriptor:responseDescriptor];
+    
+#if RESTKIT_GENERATE_SEED_DB
+    /*
+    RKLogConfigureByName("RestKit/ObjectMapping", RKLogLevelInfo);
+    RKLogConfigureByName("RestKit/CoreData", RKLogLevelTrace);
+    
+    NSError *error = nil;
+    BOOL success = RKEnsureDirectoryExistsAtPath(RKApplicationDataDirectory(), &error);
+    if (! success) {
+        RKLogError(@"Failed to create Application Data Directory at path '%@': %@", RKApplicationDataDirectory(), error);
+    }
+    NSString *seedStorePath = [RKApplicationDataDirectory() stringByAppendingPathComponent:@"MobSyncSeed.sqlite"];
+    RKManagedObjectImporter *importer = [[RKManagedObjectImporter alloc] initWithManagedObjectModel:managedObjectModel storePath:seedStorePath];
+    [importer importObjectsFromItemAtPath:[[NSBundle mainBundle] pathForResource:@"users" ofType:@"json"]
+                              withMapping:userMapping
+                                  keyPath:nil
+                                    error:&error];
+    BOOL successz = [importer finishImporting:&error];
+    if (successz) {
+        [importer logSeedingInfo];
+    } else {
+        RKLogError(@"Failed to finish import and save seed database due to error: %@", error);
+    }
+     */
+#else
+    [managedObjectStore createPersistentStoreCoordinator];
+    NSString *storePath = [RKApplicationDataDirectory() stringByAppendingPathComponent:@"MobSyncData.sqlite"];
+    NSError *error;
+    NSPersistentStore *persistentStore = [managedObjectStore addSQLitePersistentStoreAtPath:storePath fromSeedDatabaseAtPath:nil withConfiguration:nil options:nil error:&error];
+    NSAssert(persistentStore, @"Failed to add persistent store with error: %@", error);
+    
+    // Create the managed object contexts
+    [managedObjectStore createManagedObjectContexts];
+    
+    // Configure a managed object cache to ensure we do not create duplicate objects
+    managedObjectStore.managedObjectCache = [[RKInMemoryManagedObjectCache alloc] initWithManagedObjectContext:managedObjectStore.persistentStoreManagedObjectContext];
+    
+#endif
+}
+
+
+
+
+
+
+
 
 -(void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
 {
