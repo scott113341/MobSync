@@ -63,11 +63,24 @@
     // get mob data from server
     NSString *uri = @"/mobs.json";
     NSString *body = [NSString stringWithFormat:@"username=%@&usernames=%@&destination=%@", [UserStorage retrieveActiveUser], usernames, self.destination.text];
-    [MobSyncServer requestURI:uri HTTPMethod:@"POST" HTTPBody:body];
+    NSData *responseData = [MobSyncServer requestURI:uri HTTPMethod:@"POST" HTTPBody:body];
+    NSDictionary *response = [MobSyncServer convertDataToJSON:responseData];
     
-    // create new local mob model
-    Mobs *mobs = [Mobs sharedInstance];
-    [mobs.all addObject:self.mob];
+    if ([response objectForKey:@"id"]) {
+        self.mob.name = self.destination.text;
+        self.mob.status = 1;
+        
+        Mobs *mobs = [Mobs sharedInstance];
+        [mobs.all addObject:self.mob];
+        
+        NSLog(@"%@", self.navigationController);
+        
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+    else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error!" message:@"An error occurred when creating your mob" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+    }
 }
 
 // Delegate method for data passback from Choose[Friends/Group]ViewController

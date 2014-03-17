@@ -21,8 +21,9 @@
 
 - (IBAction)mobButtonWasPressed:(id)sender
 {
-    [self performSegueWithIdentifier:@"MobCreationSegue"
-                              sender:self];
+    UIStoryboard *storyboard = self.storyboard;
+    MobCreationViewController *mobCreationViewController = [storyboard instantiateViewControllerWithIdentifier:@"MobCreationViewController"];
+    [self.navigationController pushViewController:mobCreationViewController animated:YES];
 }
 
 - (void)refreshButtonAnimation
