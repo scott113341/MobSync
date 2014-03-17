@@ -28,7 +28,7 @@
     user.device_id = @"nodeviceid";
     
     // uncomment to reset default user
-    [UserStorage destroyStorageDefaults];
+    //[UserStorage destroyStorageDefaults];
     
     return YES;
 }
