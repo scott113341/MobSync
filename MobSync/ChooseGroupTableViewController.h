@@ -1,8 +1,8 @@
 //
-//  ChooseFriendsViewController.h
+//  ChooseGroupTableViewController.h
 //  MobSync
 //
-//  Created by Scott Hardy on 3/10/14.
+//  Created by Medal, Matthew on 3/17/14.
 //  Copyright (c) 2014 PWNZONE. All rights reserved.
 //
 
@@ -11,14 +11,14 @@
 
 // We implement a protocol to allow MobCreationViewController to be set as delegate of
 // this view controller to allow the passing of creation data upwards on the VC stack
-@class ChooseFriendsViewController;
-@protocol ChooseFriendsViewControllerDelegate <NSObject>
+@class ChooseGroupTableViewController;
+@protocol ChooseGroupViewControllerDelegate <NSObject>
 - (void)acceptDataPassback:(NSMutableArray *)usernames;
 @end
 
-@interface ChooseFriendsViewController : UITableViewController
+@interface ChooseGroupTableViewController : UITableViewController
 
-@property (nonatomic, weak) id <ChooseFriendsViewControllerDelegate> delegate;
+@property (nonatomic, weak) id <ChooseGroupViewControllerDelegate> delegate;
 @property (weak, nonatomic) IBOutlet UITableView *friendsTableView;
 
 - (IBAction)doneButtonWasPressed:(id)sender;

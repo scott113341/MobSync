@@ -19,6 +19,7 @@
         self.status = 0;
         self.date = @"3/10/2014";
         self.usernameArray = [[NSMutableArray alloc] init];
+        self.groupArray = [[NSMutableArray alloc] init];
     }
     return self;
 }

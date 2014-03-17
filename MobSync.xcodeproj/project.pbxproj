@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A0FC97118D6EB0F005DD086 /* ChooseGroupTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A0FC97018D6EB0F005DD086 /* ChooseGroupTableViewController.m */; };
 		0A2CECBB18CE16DE0044E20C /* FriendCreationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2CECBA18CE16DE0044E20C /* FriendCreationViewController.m */; };
 		0A7381CC18C2A68700F92E6A /* MobViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7381CB18C2A68700F92E6A /* MobViewController.m */; };
 		0A7381CF18C2A69800F92E6A /* MobCreationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7381CE18C2A69800F92E6A /* MobCreationViewController.m */; };
@@ -66,6 +67,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A0FC96F18D6EB0F005DD086 /* ChooseGroupTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseGroupTableViewController.h; sourceTree = "<group>"; };
+		0A0FC97018D6EB0F005DD086 /* ChooseGroupTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseGroupTableViewController.m; sourceTree = "<group>"; };
 		0A2CECB918CE16DE0044E20C /* FriendCreationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendCreationViewController.h; sourceTree = "<group>"; };
 		0A2CECBA18CE16DE0044E20C /* FriendCreationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendCreationViewController.m; sourceTree = "<group>"; };
 		0A7381CA18C2A68700F92E6A /* MobViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobViewController.h; sourceTree = "<group>"; };
@@ -364,6 +367,8 @@
 				0A7381CE18C2A69800F92E6A /* MobCreationViewController.m */,
 				D24D7E2E18CE66B7006EF4D0 /* ChooseFriendsViewController.h */,
 				D24D7E2F18CE66B7006EF4D0 /* ChooseFriendsViewController.m */,
+				0A0FC96F18D6EB0F005DD086 /* ChooseGroupTableViewController.h */,
+				0A0FC97018D6EB0F005DD086 /* ChooseGroupTableViewController.m */,
 				D2A2999F18CD536A0085D09D /* MobSyncViewController.h */,
 				D2A299A018CD536A0085D09D /* MobSyncViewController.m */,
 			);
@@ -538,6 +543,7 @@
 				D297661118BDE2B600F696EB /* ActivityTableViewCell.m in Sources */,
 				0A7382A518CD91DE00F92E6A /* Friend.m in Sources */,
 				D2A299A418CD86200085D09D /* NewMobAlertView.m in Sources */,
+				0A0FC97118D6EB0F005DD086 /* ChooseGroupTableViewController.m in Sources */,
 				0A7381CC18C2A68700F92E6A /* MobViewController.m in Sources */,
 				D24D7E3018CE66B7006EF4D0 /* ChooseFriendsViewController.m in Sources */,
 				D297660818BDE03900F696EB /* ActivityTableViewController.m in Sources */,
