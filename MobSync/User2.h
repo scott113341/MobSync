@@ -12,6 +12,7 @@
 
 @property NSInteger userID;
 @property (strong) NSString *username;
+@property (strong) NSString *password;
 @property (strong) NSString *name;
 @property (strong) NSString *deviceID;
 

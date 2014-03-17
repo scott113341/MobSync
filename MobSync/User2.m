@@ -10,17 +10,6 @@
 
 @implementation User2
 
-@dynamic userID, username, name, deviceID;
-
-/*
- 
- userMapping.identificationAttributes = @[ @"userID" ];
- [userMapping addAttributeMappingsFromDictionary:@{
- @"id": @"userID",
- @"username": @"username",
- @"name": @"name",
- @"device_id": @"deviceID"
- }];
- */
+@dynamic userID, username, password, name, deviceID;
 
 @end

@@ -49,6 +49,8 @@
 		D2A299A118CD536A0085D09D /* MobSyncViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A299A018CD536A0085D09D /* MobSyncViewController.m */; };
 		D2A299A418CD86200085D09D /* NewMobAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A299A318CD86200085D09D /* NewMobAlertView.m */; };
 		D2A299A718CD91750085D09D /* MobSyncServer.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A299A618CD91750085D09D /* MobSyncServer.m */; };
+		D2BFA91918D6FD6100632A39 /* CoreDataModels.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D2BFA91518D6FD6100632A39 /* CoreDataModels.xcdatamodeld */; };
+		D2BFA91A18D6FD6100632A39 /* User2.m in Sources */ = {isa = PBXBuildFile; fileRef = D2BFA91818D6FD6100632A39 /* User2.m */; };
 		D2F5F0A118C97C7F00988340 /* Contact@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2F5F09D18C97C7F00988340 /* Contact@2x.png */; };
 		D2F5F0A218C97C7F00988340 /* More@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2F5F09E18C97C7F00988340 /* More@2x.png */; };
 		D2F5F0A318C97C7F00988340 /* Recents@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2F5F09F18C97C7F00988340 /* Recents@2x.png */; };
@@ -135,6 +137,9 @@
 		D2A299A318CD86200085D09D /* NewMobAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewMobAlertView.m; sourceTree = "<group>"; };
 		D2A299A518CD91750085D09D /* MobSyncServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobSyncServer.h; sourceTree = "<group>"; };
 		D2A299A618CD91750085D09D /* MobSyncServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobSyncServer.m; sourceTree = "<group>"; };
+		D2BFA91618D6FD6100632A39 /* CoreDataModels.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModels.xcdatamodel; sourceTree = "<group>"; };
+		D2BFA91718D6FD6100632A39 /* User2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User2.h; sourceTree = "<group>"; };
+		D2BFA91818D6FD6100632A39 /* User2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User2.m; sourceTree = "<group>"; };
 		D2F5F09D18C97C7F00988340 /* Contact@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Contact@2x.png"; sourceTree = "<group>"; };
 		D2F5F09E18C97C7F00988340 /* More@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "More@2x.png"; sourceTree = "<group>"; };
 		D2F5F09F18C97C7F00988340 /* Recents@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Recents@2x.png"; sourceTree = "<group>"; };
@@ -277,6 +282,7 @@
 		D29765F218BDD85800F696EB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D2BFA91418D6FD4D00632A39 /* New Models */,
 				D297660C18BDE0C300F696EB /* Mobs.h */,
 				D297660D18BDE0C300F696EB /* Mobs.m */,
 				D297660918BDE0B500F696EB /* Mob.h */,
@@ -381,6 +387,16 @@
 				0A2CECBA18CE16DE0044E20C /* FriendCreationViewController.m */,
 			);
 			name = Friends;
+			sourceTree = "<group>";
+		};
+		D2BFA91418D6FD4D00632A39 /* New Models */ = {
+			isa = PBXGroup;
+			children = (
+				D2BFA91518D6FD6100632A39 /* CoreDataModels.xcdatamodeld */,
+				D2BFA91718D6FD6100632A39 /* User2.h */,
+				D2BFA91818D6FD6100632A39 /* User2.m */,
+			);
+			name = "New Models";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -528,6 +544,7 @@
 			files = (
 				0A73829318CD4D8B00F92E6A /* FriendsViewController.m in Sources */,
 				D201C0C318CC537C0081446C /* User.m in Sources */,
+				D2BFA91918D6FD6100632A39 /* CoreDataModels.xcdatamodeld in Sources */,
 				D297660E18BDE0C300F696EB /* Mobs.m in Sources */,
 				0A7382A218CD8BFE00F92E6A /* Friends.m in Sources */,
 				0A7381CF18C2A69800F92E6A /* MobCreationViewController.m in Sources */,
@@ -537,6 +554,7 @@
 				D201C0BA18CBE82C0081446C /* SetupViewController.m in Sources */,
 				D297661118BDE2B600F696EB /* ActivityTableViewCell.m in Sources */,
 				0A7382A518CD91DE00F92E6A /* Friend.m in Sources */,
+				D2BFA91A18D6FD6100632A39 /* User2.m in Sources */,
 				D2A299A418CD86200085D09D /* NewMobAlertView.m in Sources */,
 				0A7381CC18C2A68700F92E6A /* MobViewController.m in Sources */,
 				D24D7E3018CE66B7006EF4D0 /* ChooseFriendsViewController.m in Sources */,
@@ -769,6 +787,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D2BFA91518D6FD6100632A39 /* CoreDataModels.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D2BFA91618D6FD6100632A39 /* CoreDataModels.xcdatamodel */,
+			);
+			currentVersion = D2BFA91618D6FD6100632A39 /* CoreDataModels.xcdatamodel */;
+			path = CoreDataModels.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D29765B818BC7C1900F696EB /* Project object */;
 }

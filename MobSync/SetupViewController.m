@@ -35,7 +35,6 @@
                                                                                    cacheName:nil];
     [self.fetchedResultsController setDelegate:self];
     BOOL fetchSuccessful = [self.fetchedResultsController performFetch:&error];
-    NSAssert([[self.fetchedResultsController fetchedObjects] count], @"Seeding didn't work...");
     if (! fetchSuccessful) {
         NSLog(@"error!!!!!!!!!!!!");
     }
