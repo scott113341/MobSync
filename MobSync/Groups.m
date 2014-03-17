@@ -20,10 +20,10 @@
         self.groups = [NSMutableArray array];
         NSArray *onebro = [NSArray arrayWithObjects:@"user1", nil];
         NSArray *bros = [NSArray arrayWithObjects:@"user1", @"user2", nil];
-        NSArray *morebros = [NSArray arrayWithObjects:@"user1", @"user2", @"user3", @"user4", @"user5", nil];
+        NSArray *morebros = [NSArray arrayWithObjects:@"user1", @"user2", @"user3", nil];
         [self.groups addObject:[[Group alloc] initWithName:@"One User Group" AndMembersList:onebro]];
         [self.groups addObject:[[Group alloc] initWithName:@"Two User Group" AndMembersList:bros]];
-        [self.groups addObject:[[Group alloc] initWithName:@"Five User Group" AndMembersList:morebros]];
+        [self.groups addObject:[[Group alloc] initWithName:@"Three User Group" AndMembersList:morebros]];
     }
     return self;
 }
