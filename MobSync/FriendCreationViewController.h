@@ -10,6 +10,9 @@
 
 @interface FriendCreationViewController : UIViewController
 
+@property (weak) IBOutlet UITextField *username;
+
+-(IBAction)addBUttonWasPressed:(id)sender;
 - (IBAction)cancelButtonWasPressed:(id)sender;
 
 @end

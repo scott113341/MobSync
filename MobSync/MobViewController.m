@@ -21,8 +21,9 @@
 
 - (IBAction)mobButtonWasPressed:(id)sender
 {
-    [self performSegueWithIdentifier:@"MobCreationSegue"
-                              sender:self];
+    UIStoryboard *storyboard = self.storyboard;
+    MobCreationViewController *mobCreationViewController = [storyboard instantiateViewControllerWithIdentifier:@"MobCreationViewController"];
+    [self.navigationController pushViewController:mobCreationViewController animated:YES];
 }
 
 - (void)refreshButtonAnimation
@@ -64,7 +65,7 @@
     // show setupviewcontroller if no default user loaded
     if ([UserStorage retrieveActiveUser] == nil) {
         UIStoryboard *splashStuff = [UIStoryboard storyboardWithName:@"SplashStuff" bundle:nil];
-        UIViewController *setupViewController = [splashStuff instantiateViewControllerWithIdentifier:@"SetupViewController"];
+        UIViewController *setupViewController = [splashStuff instantiateViewControllerWithIdentifier:@"SetupNavigationViewController"];
         [self presentViewController:setupViewController animated:YES completion:nil];
     }
     else {

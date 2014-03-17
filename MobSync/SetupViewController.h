@@ -9,15 +9,18 @@
 #import <UIKit/UIKit.h>
 #import <RestKit/RestKit.h>
 
-@interface SetupViewController : UIViewController
+@interface SetupViewController : UITableViewController
 
+@property (weak) IBOutlet UITextField *usernameTextField;
+@property (weak) IBOutlet UITextField *passwordTextField;
 @property (weak) IBOutlet UITextField *nameTextField;
-
--(IBAction)continueButtonWasPressed:(id)sender;
+@property (nonatomic, weak) IBOutlet UITableViewCell *logInCell;
+@property (nonatomic, weak) IBOutlet UITableViewCell *signUpCell;
 
 @property (weak) NSUserDefaults *defaults;
 
--(BOOL)createUser;
+-(void)logIn;
+-(void)signUp;
 -(void)dismiss;
 
 @end
