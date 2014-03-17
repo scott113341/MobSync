@@ -83,7 +83,6 @@
     // create new local mob model
     Mob *newMob = [[Mob alloc] initWithServerData:mob];
     [mobs.all addObject:newMob];
-    [mobs save];
     
     return newMob;
 }

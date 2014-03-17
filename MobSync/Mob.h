@@ -11,6 +11,7 @@
 @interface Mob : NSObject
 
 -(id)initWithServerData:(NSData *)data;
+-(id)initWithDictionary:(NSDictionary *)dictionary;
 
 @property (strong) NSString *name;
 @property NSInteger status;

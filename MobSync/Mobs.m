@@ -7,6 +7,8 @@
 //
 
 #import "Mobs.h"
+#import "MobSyncServer.h"
+#import "UserStorage.h"
 
 @implementation Mobs
 
@@ -25,18 +27,24 @@
     return [self.all objectAtIndex:index];
 }
 
--(void)save
-{
-    //[self.defaults setObject:[self all] forKey:@"mobs"];
-}
-
 -(void)load
 {
-    /*
-    if ([self.defaults objectForKey:@"mobs"] != nil) {
-        self.all = [self.defaults objectForKey:@"mobs"];
+    // get mob data from server
+    NSString *uri = @"/mymobs";
+    NSString *body = [NSString stringWithFormat:@"username=%@", [UserStorage retrieveActiveUser]];
+    NSData *responseData = [MobSyncServer requestURI:uri HTTPMethod:@"POST" HTTPBody:body];
+    NSDictionary *response = [MobSyncServer convertDataToJSON:responseData];
+    
+    NSLog(@"%@", response);
+    
+    if ([response count] > 0) {
+        [self.all removeAllObjects];
+        [response enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+            NSLog(@"%@", obj);
+            Mob *newMob = [[Mob alloc] initWithDictionary:obj];
+            [self.all addObject:newMob];
+        }];
     }
-     */
 }
 
 +(id)sharedInstance
