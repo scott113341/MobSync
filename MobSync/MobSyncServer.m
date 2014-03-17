@@ -12,7 +12,7 @@
 
 +(NSData *)requestURI:(NSString *)uri HTTPMethod:(NSString *)method HTTPBody:(NSString *)body
 {
-    NSString *url = [NSString stringWithFormat:@"http://75846f47.ngrok.com%@", uri];
+    NSString *url = [NSString stringWithFormat:@"http://26c634e3.ngrok.com%@", uri];
     
     NSMutableURLRequest *postRequest = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]];
     [postRequest setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];

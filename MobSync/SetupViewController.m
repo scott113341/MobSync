@@ -10,79 +10,56 @@
 #import "User2.h"
 #import "User.h"
 
-@interface SetupViewController () <NSFetchedResultsControllerDelegate>
-
-@property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
+@interface SetupViewController ()
 
 @end
 
 @implementation SetupViewController
 
--(void)viewDidLoad
+-(void)logIn
 {
-    [super viewDidLoad];
+    NSLog(@"login");
     
-    RKLogConfigureByName("RestKit/Network", RKLogLevelTrace);
+    User *user = [User sharedInstance];
+    user.username = self.usernameTextField.text;
+    user.password = self.passwordTextField.text;
     
-    // fetch /users.json
-    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"User"];
-    NSSortDescriptor *descriptor = [NSSortDescriptor sortDescriptorWithKey:@"userID" ascending:NO];
-    fetchRequest.sortDescriptors = @[descriptor];
-    NSError *error = nil;
-    self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
-                                                                        managedObjectContext:[RKManagedObjectStore defaultStore].mainQueueManagedObjectContext
-                                                                          sectionNameKeyPath:nil
-                                                                                   cacheName:nil];
-    [self.fetchedResultsController setDelegate:self];
-    BOOL fetchSuccessful = [self.fetchedResultsController performFetch:&error];
-    if (! fetchSuccessful) {
-        NSLog(@"error!!!!!!!!!!!!");
-    }
-    
-    [self loadData];
-}
-
--(void)loadData
-{
-    [[RKObjectManager sharedManager] getObjectsAtPath:@"/users.json" parameters:nil success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-        RKLogInfo(@"Load complete");
-    } failure:^(RKObjectRequestOperation *operation, NSError *error) {
-        RKLogError(@"Load failed with error: %@", error);
-    }];
-}
-
-#pragma mark NSFetchedResultsControllerDelegate methods
-
-- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller
-{
-    NSLog(@"controllerdidchangecontent");
-}
-
-
-
-
-
-
-
-
--(void)continueButtonWasPressed:(id)sender
-{
-    [self.nameTextField resignFirstResponder];
-    
-    if ([self createUser]) {
+    if ([user logIn]) {
         [self dismiss];
     }
     else {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error!" message:@"An error occurred when registering for MobSync" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error!" message:@"An error occurred when logging in toMobSync" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         [alert show];
     }
 }
 
--(BOOL)createUser
+-(void)signUp
 {
+    NSLog(@"signup");
+    
     User *user = [User sharedInstance];
+    user.username = self.usernameTextField.text;
+    user.password = self.passwordTextField.text;
     user.name = self.nameTextField.text;
-    return [user create];
+    
+    if ([user create]) {
+        [self dismiss];
+    }
+    else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error!" message:@"An error occurred when signing up for MobSync" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+    }
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if ([self.tableView cellForRowAtIndexPath:indexPath] == self.logInCell) {
+        [self logIn];
+    }
+    else {
+        [self signUp];
+    }
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 -(void)dismiss

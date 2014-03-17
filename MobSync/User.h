@@ -8,15 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
-@interface User : NSObject
+@interface User : NSObject <NSCoding>
 
 @property NSInteger id;
 @property (strong) NSString *username;
+@property (strong) NSString *password;
 @property (strong) NSString *name;
 @property (strong) NSString *device_id;
 
 +(id)sharedInstance;
 
 -(BOOL)create;
+-(BOOL)logIn;
 
 @end
