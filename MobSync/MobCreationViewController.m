@@ -9,6 +9,7 @@
 #import "MobCreationViewController.h"
 #import "MobSyncServer.h"
 #import "Mobs.h"
+#import "UserStorage.h"
 
 @interface MobCreationViewController ()
 
@@ -57,9 +58,11 @@
 // Create mob when user finishes form
 -(void)didSelectDone:(id)sender
 {
+    NSString *usernames = [self.mob.usernameArray componentsJoinedByString:@","];
+    
     // get mob data from server
     NSString *uri = @"/mobs.json";
-    NSString *body = [NSString stringWithFormat:@"user_id=3&user_idz=3,1,2&destination=%@", self.destination.text];
+    NSString *body = [NSString stringWithFormat:@"username=%@&usernames=%@&destination=%@", [UserStorage retrieveActiveUser], usernames, self.destination.text];
     [MobSyncServer requestURI:uri HTTPMethod:@"POST" HTTPBody:body];
     
     // create new local mob model
