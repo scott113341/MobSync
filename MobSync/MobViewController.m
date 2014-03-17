@@ -62,14 +62,14 @@
                                                object:nil];
     
     // show setupviewcontroller if no default user loaded
-    if ([UserStorage retrieveActiveUser] == nil) {
+    /*if ([UserStorage retrieveActiveUser] == nil) {
         UIStoryboard *splashStuff = [UIStoryboard storyboardWithName:@"SplashStuff" bundle:nil];
         UIViewController *setupViewController = [splashStuff instantiateViewControllerWithIdentifier:@"SetupViewController"];
         [self presentViewController:setupViewController animated:YES completion:nil];
     }
     else {
         NSLog(@"user %@ loaded", [UserStorage retrieveActiveUser]);
-    }
+    }*/
 }
 
 @end

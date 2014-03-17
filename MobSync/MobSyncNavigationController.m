@@ -19,6 +19,7 @@
 {
     [super viewDidLoad];
     
+    self.tabBarController.tabBar.tintColor = [UIColor colorWithHex:@"#e74c3c"];
     // self.navigationBar.barTintColor = [UIColor colorWithHex:@"#D6CEC3"];
     // self.navigationBar.barStyle = UIBarStyleBlack;
 }
