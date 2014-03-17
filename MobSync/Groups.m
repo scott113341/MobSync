@@ -18,14 +18,26 @@
     //return [UserStorage retrieveGroups];
     if (self = [super init]) {
         self.groups = [NSMutableArray array];
-        NSArray *onebro = [NSArray arrayWithObjects:@"bananapants92", nil];
-        NSArray *bros = [NSArray arrayWithObjects:@"JeremyJJ", @"WahooNews", nil];
-        NSArray *morebros = [NSArray arrayWithObjects:@"LeoplurodonX", @"Scottymac", @"snoopdog", nil];
-        [self.groups addObject:[[Group alloc] initWithName:@"Neighbor" AndMembersList:onebro]];
-        [self.groups addObject:[[Group alloc] initWithName:@"Good Friends" AndMembersList:bros]];
-        [self.groups addObject:[[Group alloc] initWithName:@"Roommates" AndMembersList:morebros]];
+        NSArray *onebro = [NSArray arrayWithObjects:@"user1", nil];
+        NSArray *bros = [NSArray arrayWithObjects:@"user1", @"user2", nil];
+        NSArray *morebros = [NSArray arrayWithObjects:@"user1", @"user2", @"user3", @"user4", @"user5", nil];
+        [self.groups addObject:[[Group alloc] initWithName:@"One User Group" AndMembersList:onebro]];
+        [self.groups addObject:[[Group alloc] initWithName:@"Two User Group" AndMembersList:bros]];
+        [self.groups addObject:[[Group alloc] initWithName:@"Five User Group" AndMembersList:morebros]];
     }
     return self;
+}
+
+-(NSArray *)usernamesInGroupName:(NSString *)groupName
+{
+    __block NSArray *usernames;
+    [self.groups enumerateObjectsUsingBlock:^(Group *group, NSUInteger idx, BOOL *stop) {
+        if (group.name == groupName) {
+            usernames = group.membersList;
+        }
+    }];
+    
+    return usernames;
 }
 
 - (Group*)groupAtIndex:(int)index

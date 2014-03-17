@@ -19,6 +19,10 @@
         
         [self.friends addObject:[[Friend alloc] initWithUsername:@"scott123" AndName:@"Scott Hardy"]];
         [self.friends addObject:[[Friend alloc] initWithUsername:@"matt123" AndName:@"Matt Medal"]];
+        
+        [self.friends addObject:[[Friend alloc] initWithUsername:@"user1" AndName:@"User Oneguru"]];
+        [self.friends addObject:[[Friend alloc] initWithUsername:@"user2" AndName:@"User Twomaster"]];
+        [self.friends addObject:[[Friend alloc] initWithUsername:@"user3" AndName:@"User Threedude"]];
     }
     return self;
 }
