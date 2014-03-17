@@ -16,5 +16,6 @@
 @property (strong) NSDictionary *notificationData;
 
 -(Mob *)processRemoteNotificationData:(NSDictionary *)data;
+-(void)initializeRestKit;
 
 @end
