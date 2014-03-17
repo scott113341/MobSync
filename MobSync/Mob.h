@@ -16,6 +16,7 @@
 @property NSInteger status;
 @property (strong) NSString *date;
 @property (strong) NSMutableArray *usernameArray;
+@property (strong) NSMutableArray *groupArray;
 
 -(UIColor *)statusColor;
 

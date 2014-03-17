@@ -1,25 +1,25 @@
 //
-//  ChooseFriendsViewController.m
+//  ChooseGroupTableViewController.m
 //  MobSync
 //
-//  Created by Scott Hardy on 3/10/14.
+//  Created by Medal, Matthew on 3/17/14.
 //  Copyright (c) 2014 PWNZONE. All rights reserved.
 //
 
-#import "ChooseFriendsViewController.h"
-#import "Friends.h"
+#import "ChooseGroupTableViewController.h"
+#import "Groups.h"
 
-@interface ChooseFriendsViewController ()
+@interface ChooseGroupTableViewController ()
 
 @end
 
-@implementation ChooseFriendsViewController
+@implementation ChooseGroupTableViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     self.navigationItem.hidesBackButton = YES;
-    self.friendsTableView.dataSource = [Friends sharedInstance];
+    self.tableView.dataSource = [Groups sharedInstance];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -28,8 +28,7 @@
     // if cells were checked previously, recheck them
     NSArray *cells = [self.tableView visibleCells];
     for (UITableViewCell *cell in cells) {
-        NSLog(@"%@", cell.textLabel.text);
-        if ([self.mob.usernameArray indexOfObject:cell.textLabel.text] != NSNotFound) {
+        if ([self.mob.groupArray indexOfObject:cell.textLabel.text] != NSNotFound) {
             cell.accessoryType = UITableViewCellAccessoryCheckmark;
         }
     }
@@ -40,15 +39,15 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if([tableView cellForRowAtIndexPath:indexPath].accessoryType == UITableViewCellAccessoryCheckmark) {
         [tableView cellForRowAtIndexPath:indexPath].accessoryType = UITableViewCellAccessoryNone;
-        [self.mob.usernameArray removeObjectIdenticalTo:[tableView cellForRowAtIndexPath:indexPath].textLabel.text];
+        [self.mob.groupArray removeObjectIdenticalTo:[tableView cellForRowAtIndexPath:indexPath].textLabel.text];
     }
     else {
         [tableView cellForRowAtIndexPath:indexPath].accessoryType = UITableViewCellAccessoryCheckmark;
-        [self.mob.usernameArray addObject:[tableView cellForRowAtIndexPath:indexPath].textLabel.text];
+        [self.mob.groupArray addObject:[tableView cellForRowAtIndexPath:indexPath].textLabel.text];
     }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
