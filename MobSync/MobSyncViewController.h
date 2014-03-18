@@ -12,9 +12,11 @@
 
 @interface MobSyncViewController : UIViewController
 
-@property (weak) IBOutlet UIButton *done;
+@property (weak) IBOutlet UILabel *destination;
+@property (weak) IBOutlet UILabel *people;
 
--(IBAction)didPressDoneButton:(id)sender;
+-(IBAction)joinButtonWasPressed:(id)sender;
+-(IBAction)declineButtonWasPressed:(id)sender;
 
 @property (strong) Mob *mob;
 @property (strong) Mobs *mobs;

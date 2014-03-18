@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Friend : NSObject
+@interface Friend : NSObject <NSCoding>
 
 @property (strong) NSString *username;
 @property (strong) NSString *name;

@@ -36,9 +36,11 @@
 -(id)initWithDictionary:(NSDictionary *)dictionary
 {
     if (self = [super init]) {
+        self.id = (NSInteger)[dictionary objectForKey:@"id"];
         self.name = [dictionary objectForKey:@"destination"];
         self.status = (int)[dictionary objectForKey:@"status"];
         self.date = [dictionary objectForKey:@"unix_timestamp"];
+        self.people = [dictionary objectForKey:@"people"];
     }
     return self;
 }

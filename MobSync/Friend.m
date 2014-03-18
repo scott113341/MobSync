@@ -20,4 +20,24 @@
     return self;
 }
 
+
+
+#pragma mark - NSCoding
+
+-(id)initWithCoder:(NSCoder *)aDecoder
+{
+    if (self = [super init]) {
+        self.username = [aDecoder decodeObjectForKey:@"username"];
+        self.name = [aDecoder decodeObjectForKey:@"name"];
+    }
+    
+    return self;
+}
+
+-(void)encodeWithCoder:(NSCoder *)aCoder
+{
+    [aCoder encodeObject:self.username forKey:@"username"];
+    [aCoder encodeObject:self.name forKey:@"name"];
+}
+
 @end

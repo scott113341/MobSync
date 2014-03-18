@@ -90,8 +90,7 @@
         
         Mobs *mobs = [Mobs sharedInstance];
         [mobs.all addObject:self.mob];
-        
-        NSLog(@"%@", self.navigationController);
+        [mobs load];
         
         [self.navigationController popViewControllerAnimated:YES];
     }

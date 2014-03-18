@@ -19,7 +19,6 @@
         
         [self.friends addObject:[[Friend alloc] initWithUsername:@"scott123" AndName:@"Scott Hardy"]];
         [self.friends addObject:[[Friend alloc] initWithUsername:@"matt123" AndName:@"Matt Medal"]];
-        
         [self.friends addObject:[[Friend alloc] initWithUsername:@"user1" AndName:@"User Oneguru"]];
         [self.friends addObject:[[Friend alloc] initWithUsername:@"user2" AndName:@"User Twomaster"]];
         [self.friends addObject:[[Friend alloc] initWithUsername:@"user3" AndName:@"User Threedude"]];
@@ -80,6 +79,24 @@
         sharedFriendsList = [[self alloc] initFromStorage];
     });
     return sharedFriendsList;
+}
+
+
+
+#pragma mark - NSCoding
+
+-(id)initWithCoder:(NSCoder *)aDecoder
+{
+    if (self = [super init]) {
+        self.friends = [aDecoder decodeObjectForKey:@"friends"];
+    }
+    
+    return self;
+}
+
+-(void)encodeWithCoder:(NSCoder *)aCoder
+{
+    [aCoder encodeObject:self.friends forKey:@"friends"];
 }
 
 @end
