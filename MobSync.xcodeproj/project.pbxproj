@@ -7,6 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A0FC97118D6EB0F005DD086 /* ChooseGroupTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A0FC97018D6EB0F005DD086 /* ChooseGroupTableViewController.m */; };
+		0A2CECBB18CE16DE0044E20C /* FriendCreationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A2CECBA18CE16DE0044E20C /* FriendCreationViewController.m */; };
+		0A7381CC18C2A68700F92E6A /* MobViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7381CB18C2A68700F92E6A /* MobViewController.m */; };
+		0A7381CF18C2A69800F92E6A /* MobCreationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7381CE18C2A69800F92E6A /* MobCreationViewController.m */; };
+		0A7381D218C2A6F400F92E6A /* MobBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A7381D018C2A6F400F92E6A /* MobBtn.png */; };
+		0A7381D318C2A6F400F92E6A /* MobBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A7381D118C2A6F400F92E6A /* MobBtn@2x.png */; };
+		0A7381E618C2C05100F92E6A /* BtnRing.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A7381E418C2C05100F92E6A /* BtnRing.png */; };
+		0A7381E718C2C05100F92E6A /* BtnRing@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A7381E518C2C05100F92E6A /* BtnRing@2x.png */; };
+		0A73829018CD415000F92E6A /* UserStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A73828F18CD415000F92E6A /* UserStorage.m */; };
+		0A73829318CD4D8B00F92E6A /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A73829218CD4D8B00F92E6A /* FriendsViewController.m */; };
+		0A73829C18CD867400F92E6A /* Groups.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A73829B18CD867400F92E6A /* Groups.m */; };
+		0A73829F18CD88E600F92E6A /* GroupInstanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A73829E18CD88E600F92E6A /* GroupInstanceViewController.m */; };
+		0A7382A218CD8BFE00F92E6A /* Friends.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7382A118CD8BFE00F92E6A /* Friends.m */; };
+		0A7382A518CD91DE00F92E6A /* Friend.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7382A418CD91DE00F92E6A /* Friend.m */; };
+		0A7382A818CD943300F92E6A /* Group.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A7382A718CD943300F92E6A /* Group.m */; };
+		3775BC5C144448E58D1ECD50 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D38E693BE514428EA6D50E24 /* libPods.a */; };
+		D201C0B418CBE3950081446C /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = D201C0B318CBE3950081446C /* UIColor+Hex.m */; };
+		D201C0B618CBE7F80081446C /* SplashStuff.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D201C0B518CBE7F80081446C /* SplashStuff.storyboard */; };
+		D201C0BA18CBE82C0081446C /* SetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D201C0B918CBE82C0081446C /* SetupViewController.m */; };
+		D201C0C018CBEB9F0081446C /* MobSyncNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D201C0BF18CBEB9F0081446C /* MobSyncNavigationController.m */; };
+		D201C0C318CC537C0081446C /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = D201C0C218CC537C0081446C /* User.m */; };
+		D24D7E3018CE66B7006EF4D0 /* ChooseFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D24D7E2F18CE66B7006EF4D0 /* ChooseFriendsViewController.m */; };
 		D29765C418BC7C1900F696EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D29765C318BC7C1900F696EB /* Foundation.framework */; };
 		D29765C618BC7C1900F696EB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D29765C518BC7C1900F696EB /* CoreGraphics.framework */; };
 		D29765C818BC7C1900F696EB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D29765C718BC7C1900F696EB /* UIKit.framework */; };
@@ -20,6 +42,20 @@
 		D29765E718BC7C1900F696EB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D29765E518BC7C1900F696EB /* InfoPlist.strings */; };
 		D29765E918BC7C1900F696EB /* MobSyncTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D29765E818BC7C1900F696EB /* MobSyncTests.m */; };
 		D29765F718BDD8DD00F696EB /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D29765F618BDD8DD00F696EB /* MainStoryboard.storyboard */; };
+		D297660818BDE03900F696EB /* ActivityTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D297660718BDE03900F696EB /* ActivityTableViewController.m */; };
+		D297660B18BDE0B500F696EB /* Mob.m in Sources */ = {isa = PBXBuildFile; fileRef = D297660A18BDE0B500F696EB /* Mob.m */; };
+		D297660E18BDE0C300F696EB /* Mobs.m in Sources */ = {isa = PBXBuildFile; fileRef = D297660D18BDE0C300F696EB /* Mobs.m */; };
+		D297661118BDE2B600F696EB /* ActivityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D297661018BDE2B600F696EB /* ActivityTableViewCell.m */; };
+		D297661418BDEFBB00F696EB /* ActivityDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D297661318BDEFBB00F696EB /* ActivityDetailViewController.m */; };
+		D2A299A118CD536A0085D09D /* MobSyncViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A299A018CD536A0085D09D /* MobSyncViewController.m */; };
+		D2A299A418CD86200085D09D /* NewMobAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A299A318CD86200085D09D /* NewMobAlertView.m */; };
+		D2A299A718CD91750085D09D /* MobSyncServer.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A299A618CD91750085D09D /* MobSyncServer.m */; };
+		D2BFA91918D6FD6100632A39 /* CoreDataModels.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D2BFA91518D6FD6100632A39 /* CoreDataModels.xcdatamodeld */; };
+		D2BFA91A18D6FD6100632A39 /* User2.m in Sources */ = {isa = PBXBuildFile; fileRef = D2BFA91818D6FD6100632A39 /* User2.m */; };
+		D2F5F0A118C97C7F00988340 /* Contact@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2F5F09D18C97C7F00988340 /* Contact@2x.png */; };
+		D2F5F0A218C97C7F00988340 /* More@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2F5F09E18C97C7F00988340 /* More@2x.png */; };
+		D2F5F0A318C97C7F00988340 /* Recents@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2F5F09F18C97C7F00988340 /* Recents@2x.png */; };
+		D2F5F0A418C97C7F00988340 /* Syncing@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D2F5F0A018C97C7F00988340 /* Syncing@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +69,44 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A0FC96F18D6EB0F005DD086 /* ChooseGroupTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseGroupTableViewController.h; sourceTree = "<group>"; };
+		0A0FC97018D6EB0F005DD086 /* ChooseGroupTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseGroupTableViewController.m; sourceTree = "<group>"; };
+		0A2CECB918CE16DE0044E20C /* FriendCreationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendCreationViewController.h; sourceTree = "<group>"; };
+		0A2CECBA18CE16DE0044E20C /* FriendCreationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendCreationViewController.m; sourceTree = "<group>"; };
+		0A7381CA18C2A68700F92E6A /* MobViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobViewController.h; sourceTree = "<group>"; };
+		0A7381CB18C2A68700F92E6A /* MobViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobViewController.m; sourceTree = "<group>"; };
+		0A7381CD18C2A69800F92E6A /* MobCreationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobCreationViewController.h; sourceTree = "<group>"; };
+		0A7381CE18C2A69800F92E6A /* MobCreationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobCreationViewController.m; sourceTree = "<group>"; };
+		0A7381D018C2A6F400F92E6A /* MobBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MobBtn.png; sourceTree = "<group>"; };
+		0A7381D118C2A6F400F92E6A /* MobBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MobBtn@2x.png"; sourceTree = "<group>"; };
+		0A7381E418C2C05100F92E6A /* BtnRing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BtnRing.png; sourceTree = "<group>"; };
+		0A7381E518C2C05100F92E6A /* BtnRing@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BtnRing@2x.png"; sourceTree = "<group>"; };
+		0A73828E18CD415000F92E6A /* UserStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserStorage.h; sourceTree = "<group>"; };
+		0A73828F18CD415000F92E6A /* UserStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserStorage.m; sourceTree = "<group>"; };
+		0A73829118CD4D8B00F92E6A /* FriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsViewController.h; sourceTree = "<group>"; };
+		0A73829218CD4D8B00F92E6A /* FriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsViewController.m; sourceTree = "<group>"; };
+		0A73829A18CD867400F92E6A /* Groups.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Groups.h; sourceTree = "<group>"; };
+		0A73829B18CD867400F92E6A /* Groups.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Groups.m; sourceTree = "<group>"; };
+		0A73829D18CD88E600F92E6A /* GroupInstanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupInstanceViewController.h; sourceTree = "<group>"; };
+		0A73829E18CD88E600F92E6A /* GroupInstanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupInstanceViewController.m; sourceTree = "<group>"; };
+		0A7382A018CD8BFE00F92E6A /* Friends.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Friends.h; sourceTree = "<group>"; };
+		0A7382A118CD8BFE00F92E6A /* Friends.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Friends.m; sourceTree = "<group>"; };
+		0A7382A318CD91DE00F92E6A /* Friend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Friend.h; sourceTree = "<group>"; };
+		0A7382A418CD91DE00F92E6A /* Friend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Friend.m; sourceTree = "<group>"; };
+		0A7382A618CD943300F92E6A /* Group.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Group.h; sourceTree = "<group>"; };
+		0A7382A718CD943300F92E6A /* Group.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Group.m; sourceTree = "<group>"; };
+		A63788B78E1B4C919634CA05 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		D201C0B218CBE3950081446C /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		D201C0B318CBE3950081446C /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		D201C0B518CBE7F80081446C /* SplashStuff.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SplashStuff.storyboard; sourceTree = "<group>"; };
+		D201C0B818CBE82C0081446C /* SetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetupViewController.h; sourceTree = "<group>"; };
+		D201C0B918CBE82C0081446C /* SetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetupViewController.m; sourceTree = "<group>"; };
+		D201C0BE18CBEB9F0081446C /* MobSyncNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobSyncNavigationController.h; sourceTree = "<group>"; };
+		D201C0BF18CBEB9F0081446C /* MobSyncNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobSyncNavigationController.m; sourceTree = "<group>"; };
+		D201C0C118CC537C0081446C /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		D201C0C218CC537C0081446C /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		D24D7E2E18CE66B7006EF4D0 /* ChooseFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseFriendsViewController.h; sourceTree = "<group>"; };
+		D24D7E2F18CE66B7006EF4D0 /* ChooseFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseFriendsViewController.m; sourceTree = "<group>"; };
 		D29765C018BC7C1900F696EB /* MobSync.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobSync.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D29765C318BC7C1900F696EB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D29765C518BC7C1900F696EB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -50,6 +124,30 @@
 		D29765E618BC7C1900F696EB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D29765E818BC7C1900F696EB /* MobSyncTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MobSyncTests.m; sourceTree = "<group>"; };
 		D29765F618BDD8DD00F696EB /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		D297660618BDE03900F696EB /* ActivityTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityTableViewController.h; sourceTree = "<group>"; };
+		D297660718BDE03900F696EB /* ActivityTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityTableViewController.m; sourceTree = "<group>"; };
+		D297660918BDE0B500F696EB /* Mob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mob.h; sourceTree = "<group>"; };
+		D297660A18BDE0B500F696EB /* Mob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mob.m; sourceTree = "<group>"; };
+		D297660C18BDE0C300F696EB /* Mobs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mobs.h; sourceTree = "<group>"; };
+		D297660D18BDE0C300F696EB /* Mobs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mobs.m; sourceTree = "<group>"; };
+		D297660F18BDE2B600F696EB /* ActivityTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityTableViewCell.h; sourceTree = "<group>"; };
+		D297661018BDE2B600F696EB /* ActivityTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityTableViewCell.m; sourceTree = "<group>"; };
+		D297661218BDEFBB00F696EB /* ActivityDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityDetailViewController.h; sourceTree = "<group>"; };
+		D297661318BDEFBB00F696EB /* ActivityDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityDetailViewController.m; sourceTree = "<group>"; };
+		D2A2999F18CD536A0085D09D /* MobSyncViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobSyncViewController.h; sourceTree = "<group>"; };
+		D2A299A018CD536A0085D09D /* MobSyncViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobSyncViewController.m; sourceTree = "<group>"; };
+		D2A299A218CD86200085D09D /* NewMobAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewMobAlertView.h; sourceTree = "<group>"; };
+		D2A299A318CD86200085D09D /* NewMobAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewMobAlertView.m; sourceTree = "<group>"; };
+		D2A299A518CD91750085D09D /* MobSyncServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobSyncServer.h; sourceTree = "<group>"; };
+		D2A299A618CD91750085D09D /* MobSyncServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobSyncServer.m; sourceTree = "<group>"; };
+		D2BFA91618D6FD6100632A39 /* CoreDataModels.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModels.xcdatamodel; sourceTree = "<group>"; };
+		D2BFA91718D6FD6100632A39 /* User2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User2.h; sourceTree = "<group>"; };
+		D2BFA91818D6FD6100632A39 /* User2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User2.m; sourceTree = "<group>"; };
+		D2F5F09D18C97C7F00988340 /* Contact@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Contact@2x.png"; sourceTree = "<group>"; };
+		D2F5F09E18C97C7F00988340 /* More@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "More@2x.png"; sourceTree = "<group>"; };
+		D2F5F09F18C97C7F00988340 /* Recents@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Recents@2x.png"; sourceTree = "<group>"; };
+		D2F5F0A018C97C7F00988340 /* Syncing@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Syncing@2x.png"; sourceTree = "<group>"; };
+		D38E693BE514428EA6D50E24 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +158,7 @@
 				D29765C618BC7C1900F696EB /* CoreGraphics.framework in Frameworks */,
 				D29765C818BC7C1900F696EB /* UIKit.framework in Frameworks */,
 				D29765C418BC7C1900F696EB /* Foundation.framework in Frameworks */,
+				3775BC5C144448E58D1ECD50 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +175,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D201C0B018CBE33B0081446C /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				D201C0BE18CBEB9F0081446C /* MobSyncNavigationController.h */,
+				D201C0BF18CBEB9F0081446C /* MobSyncNavigationController.m */,
+				D2A299A218CD86200085D09D /* NewMobAlertView.h */,
+				D2A299A318CD86200085D09D /* NewMobAlertView.m */,
+				D2A299A518CD91750085D09D /* MobSyncServer.h */,
+				D2A299A618CD91750085D09D /* MobSyncServer.m */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
+		D201C0B118CBE37A0081446C /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				D201C0B218CBE3950081446C /* UIColor+Hex.h */,
+				D201C0B318CBE3950081446C /* UIColor+Hex.m */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		D201C0B718CBE8100081446C /* Setup */ = {
+			isa = PBXGroup;
+			children = (
+				D201C0B818CBE82C0081446C /* SetupViewController.h */,
+				D201C0B918CBE82C0081446C /* SetupViewController.m */,
+			);
+			name = Setup;
+			sourceTree = "<group>";
+		};
 		D29765B718BC7C1900F696EB = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +213,7 @@
 				D29765E218BC7C1900F696EB /* MobSyncTests */,
 				D29765C218BC7C1900F696EB /* Frameworks */,
 				D29765C118BC7C1900F696EB /* Products */,
+				A63788B78E1B4C919634CA05 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,6 +233,7 @@
 				D29765C518BC7C1900F696EB /* CoreGraphics.framework */,
 				D29765C718BC7C1900F696EB /* UIKit.framework */,
 				D29765DC18BC7C1900F696EB /* XCTest.framework */,
+				D38E693BE514428EA6D50E24 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -109,6 +241,7 @@
 		D29765C918BC7C1900F696EB /* MobSync */ = {
 			isa = PBXGroup;
 			children = (
+				D201C0B118CBE37A0081446C /* Core */,
 				D29765F518BDD87D00F696EB /* Assets */,
 				D29765F218BDD85800F696EB /* Models */,
 				D29765F318BDD86400F696EB /* Views */,
@@ -152,6 +285,23 @@
 		D29765F218BDD85800F696EB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D2BFA91418D6FD4D00632A39 /* New Models */,
+				D297660C18BDE0C300F696EB /* Mobs.h */,
+				D297660D18BDE0C300F696EB /* Mobs.m */,
+				D297660918BDE0B500F696EB /* Mob.h */,
+				D297660A18BDE0B500F696EB /* Mob.m */,
+				D201C0C118CC537C0081446C /* User.h */,
+				D201C0C218CC537C0081446C /* User.m */,
+				0A73828E18CD415000F92E6A /* UserStorage.h */,
+				0A73828F18CD415000F92E6A /* UserStorage.m */,
+				0A73829A18CD867400F92E6A /* Groups.h */,
+				0A73829B18CD867400F92E6A /* Groups.m */,
+				0A7382A618CD943300F92E6A /* Group.h */,
+				0A7382A718CD943300F92E6A /* Group.m */,
+				0A7382A018CD8BFE00F92E6A /* Friends.h */,
+				0A7382A118CD8BFE00F92E6A /* Friends.m */,
+				0A7382A318CD91DE00F92E6A /* Friend.h */,
+				0A7382A418CD91DE00F92E6A /* Friend.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -160,6 +310,7 @@
 			isa = PBXGroup;
 			children = (
 				D29765F618BDD8DD00F696EB /* MainStoryboard.storyboard */,
+				D201C0B518CBE7F80081446C /* SplashStuff.storyboard */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -167,6 +318,12 @@
 		D29765F418BDD86800F696EB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D201C0B718CBE8100081446C /* Setup */,
+				D297660118BDDE2B00F696EB /* Mob */,
+				D297660018BDDE2100F696EB /* Activity */,
+				D297660218BDDE3400F696EB /* Friends */,
+				D29765FF18BDDE1300F696EB /* Settings */,
+				D201C0B018CBE33B0081446C /* Other */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -174,9 +331,77 @@
 		D29765F518BDD87D00F696EB /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				D2F5F09D18C97C7F00988340 /* Contact@2x.png */,
+				D2F5F09E18C97C7F00988340 /* More@2x.png */,
+				D2F5F09F18C97C7F00988340 /* Recents@2x.png */,
+				D2F5F0A018C97C7F00988340 /* Syncing@2x.png */,
+				0A7381E418C2C05100F92E6A /* BtnRing.png */,
+				0A7381E518C2C05100F92E6A /* BtnRing@2x.png */,
+				0A7381D018C2A6F400F92E6A /* MobBtn.png */,
+				0A7381D118C2A6F400F92E6A /* MobBtn@2x.png */,
 				D29765D518BC7C1900F696EB /* Images.xcassets */,
 			);
 			name = Assets;
+			sourceTree = "<group>";
+		};
+		D29765FF18BDDE1300F696EB /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		D297660018BDDE2100F696EB /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				D297660618BDE03900F696EB /* ActivityTableViewController.h */,
+				D297660718BDE03900F696EB /* ActivityTableViewController.m */,
+				D297660F18BDE2B600F696EB /* ActivityTableViewCell.h */,
+				D297661018BDE2B600F696EB /* ActivityTableViewCell.m */,
+				D297661218BDEFBB00F696EB /* ActivityDetailViewController.h */,
+				D297661318BDEFBB00F696EB /* ActivityDetailViewController.m */,
+			);
+			name = Activity;
+			sourceTree = "<group>";
+		};
+		D297660118BDDE2B00F696EB /* Mob */ = {
+			isa = PBXGroup;
+			children = (
+				0A7381CA18C2A68700F92E6A /* MobViewController.h */,
+				0A7381CB18C2A68700F92E6A /* MobViewController.m */,
+				0A7381CD18C2A69800F92E6A /* MobCreationViewController.h */,
+				0A7381CE18C2A69800F92E6A /* MobCreationViewController.m */,
+				D24D7E2E18CE66B7006EF4D0 /* ChooseFriendsViewController.h */,
+				D24D7E2F18CE66B7006EF4D0 /* ChooseFriendsViewController.m */,
+				0A0FC96F18D6EB0F005DD086 /* ChooseGroupTableViewController.h */,
+				0A0FC97018D6EB0F005DD086 /* ChooseGroupTableViewController.m */,
+				D2A2999F18CD536A0085D09D /* MobSyncViewController.h */,
+				D2A299A018CD536A0085D09D /* MobSyncViewController.m */,
+			);
+			name = Mob;
+			sourceTree = "<group>";
+		};
+		D297660218BDDE3400F696EB /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				0A73829118CD4D8B00F92E6A /* FriendsViewController.h */,
+				0A73829218CD4D8B00F92E6A /* FriendsViewController.m */,
+				0A73829D18CD88E600F92E6A /* GroupInstanceViewController.h */,
+				0A73829E18CD88E600F92E6A /* GroupInstanceViewController.m */,
+				0A2CECB918CE16DE0044E20C /* FriendCreationViewController.h */,
+				0A2CECBA18CE16DE0044E20C /* FriendCreationViewController.m */,
+			);
+			name = Friends;
+			sourceTree = "<group>";
+		};
+		D2BFA91418D6FD4D00632A39 /* New Models */ = {
+			isa = PBXGroup;
+			children = (
+				D2BFA91518D6FD6100632A39 /* CoreDataModels.xcdatamodeld */,
+				D2BFA91718D6FD6100632A39 /* User2.h */,
+				D2BFA91818D6FD6100632A39 /* User2.m */,
+			);
+			name = "New Models";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,9 +411,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D29765EC18BC7C1900F696EB /* Build configuration list for PBXNativeTarget "MobSync" */;
 			buildPhases = (
+				BE8DB69FF5874B2C933E7EEC /* Check Pods Manifest.lock */,
 				D29765BC18BC7C1900F696EB /* Sources */,
 				D29765BD18BC7C1900F696EB /* Frameworks */,
 				D29765BE18BC7C1900F696EB /* Resources */,
+				3533D994DE74414AA67A823E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -223,9 +450,12 @@
 		D29765B818BC7C1900F696EB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = PWNZONE;
 				TargetAttributes = {
+					D29765BF18BC7C1900F696EB = {
+						DevelopmentTeam = 432G6CL9N8;
+					};
 					D29765DA18BC7C1900F696EB = {
 						TestTargetID = D29765BF18BC7C1900F696EB;
 					};
@@ -254,9 +484,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2F5F0A218C97C7F00988340 /* More@2x.png in Resources */,
+				0A7381E718C2C05100F92E6A /* BtnRing@2x.png in Resources */,
 				D29765F718BDD8DD00F696EB /* MainStoryboard.storyboard in Resources */,
 				D29765CE18BC7C1900F696EB /* InfoPlist.strings in Resources */,
 				D29765D618BC7C1900F696EB /* Images.xcassets in Resources */,
+				0A7381D218C2A6F400F92E6A /* MobBtn.png in Resources */,
+				0A7381E618C2C05100F92E6A /* BtnRing.png in Resources */,
+				D2F5F0A318C97C7F00988340 /* Recents@2x.png in Resources */,
+				D201C0B618CBE7F80081446C /* SplashStuff.storyboard in Resources */,
+				D2F5F0A418C97C7F00988340 /* Syncing@2x.png in Resources */,
+				0A7381D318C2A6F400F92E6A /* MobBtn@2x.png in Resources */,
+				D2F5F0A118C97C7F00988340 /* Contact@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,13 +509,72 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3533D994DE74414AA67A823E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BE8DB69FF5874B2C933E7EEC /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D29765BC18BC7C1900F696EB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A73829318CD4D8B00F92E6A /* FriendsViewController.m in Sources */,
+				D201C0C318CC537C0081446C /* User.m in Sources */,
+				D2BFA91918D6FD6100632A39 /* CoreDataModels.xcdatamodeld in Sources */,
+				D297660E18BDE0C300F696EB /* Mobs.m in Sources */,
+				0A7382A218CD8BFE00F92E6A /* Friends.m in Sources */,
+				0A7381CF18C2A69800F92E6A /* MobCreationViewController.m in Sources */,
 				D29765D418BC7C1900F696EB /* AppDelegate.m in Sources */,
+				D201C0C018CBEB9F0081446C /* MobSyncNavigationController.m in Sources */,
+				0A7382A818CD943300F92E6A /* Group.m in Sources */,
+				D201C0BA18CBE82C0081446C /* SetupViewController.m in Sources */,
+				D297661118BDE2B600F696EB /* ActivityTableViewCell.m in Sources */,
+				0A7382A518CD91DE00F92E6A /* Friend.m in Sources */,
+				D2BFA91A18D6FD6100632A39 /* User2.m in Sources */,
+				D2A299A418CD86200085D09D /* NewMobAlertView.m in Sources */,
+				0A0FC97118D6EB0F005DD086 /* ChooseGroupTableViewController.m in Sources */,
+				0A7381CC18C2A68700F92E6A /* MobViewController.m in Sources */,
+				D24D7E3018CE66B7006EF4D0 /* ChooseFriendsViewController.m in Sources */,
+				D297660818BDE03900F696EB /* ActivityTableViewController.m in Sources */,
+				0A2CECBB18CE16DE0044E20C /* FriendCreationViewController.m in Sources */,
+				0A73829F18CD88E600F92E6A /* GroupInstanceViewController.m in Sources */,
+				D2A299A718CD91750085D09D /* MobSyncServer.m in Sources */,
+				D297660B18BDE0B500F696EB /* Mob.m in Sources */,
+				D201C0B418CBE3950081446C /* UIColor+Hex.m in Sources */,
 				D29765D018BC7C1900F696EB /* main.m in Sources */,
+				0A73829018CD415000F92E6A /* UserStorage.m in Sources */,
+				D2A299A118CD536A0085D09D /* MobSyncViewController.m in Sources */,
+				D297661418BDEFBB00F696EB /* ActivityDetailViewController.m in Sources */,
+				0A73829C18CD867400F92E6A /* Groups.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,7 +620,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -361,7 +658,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -392,26 +688,36 @@
 		};
 		D29765ED18BC7C1900F696EB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A63788B78E1B4C919634CA05 /* Pods.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = Icon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MobSync/MobSync-Prefix.pch";
 				INFOPLIST_FILE = "MobSync/MobSync-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
 		D29765EE18BC7C1900F696EB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A63788B78E1B4C919634CA05 /* Pods.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = Icon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MobSync/MobSync-Prefix.pch";
 				INFOPLIST_FILE = "MobSync/MobSync-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -419,7 +725,6 @@
 		D29765F018BC7C1900F696EB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MobSync.app/MobSync";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -442,7 +747,6 @@
 		D29765F118BC7C1900F696EB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MobSync.app/MobSync";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -477,6 +781,7 @@
 				D29765EE18BC7C1900F696EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D29765EF18BC7C1900F696EB /* Build configuration list for PBXNativeTarget "MobSyncTests" */ = {
 			isa = XCConfigurationList;
@@ -485,8 +790,22 @@
 				D29765F118BC7C1900F696EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D2BFA91518D6FD6100632A39 /* CoreDataModels.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D2BFA91618D6FD6100632A39 /* CoreDataModels.xcdatamodel */,
+			);
+			currentVersion = D2BFA91618D6FD6100632A39 /* CoreDataModels.xcdatamodel */;
+			path = CoreDataModels.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D29765B818BC7C1900F696EB /* Project object */;
 }
