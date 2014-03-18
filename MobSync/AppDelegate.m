@@ -13,9 +13,7 @@
 #import "MobSyncViewController.h"
 #import "Mobs.h"
 #import "MobSyncServer.h"
-
-#import <RestKit/CoreData.h>
-#import <RestKit/RestKit.h>
+#import "Friends.h"
 
 @implementation AppDelegate
 
@@ -56,7 +54,7 @@
     NSLog(@"%li", (long)buttonIndex);
     
     NSMutableArray *allMobs = [[Mobs sharedInstance] all];
-    Mob *mob = [allMobs objectAtIndex:[allMobs count]-1];
+    Mob *mob = [allMobs lastObject];
     
     if (buttonIndex == 1) {
         UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"SplashStuff" bundle:nil];
@@ -83,7 +81,6 @@
     // create new local mob model
     Mob *newMob = [[Mob alloc] initWithServerData:mob];
     [mobs.all addObject:newMob];
-    [mobs save];
     
     return newMob;
 }
@@ -96,8 +93,7 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    NSLog(@"entering background");
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application

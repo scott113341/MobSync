@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Friend.h"
 
-@interface Friends : NSObject <UITableViewDataSource>
+@interface Friends : NSObject <UITableViewDataSource, NSCoding>
 
 @property (strong) NSMutableArray *friends;
 

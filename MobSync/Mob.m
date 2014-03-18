@@ -28,10 +28,19 @@
 {
     if (self = [super init]) {
         NSDictionary *mob = [MobSyncServer convertDataToJSON:data];
-        
-        self.name = [mob objectForKey:@"destination"];
-        self.status = 1;
-        self.date = [mob objectForKey:@"date"];
+        return [self initWithDictionary:mob];
+    }
+    return self;
+}
+
+-(id)initWithDictionary:(NSDictionary *)dictionary
+{
+    if (self = [super init]) {
+        self.id = (NSInteger)[dictionary objectForKey:@"id"];
+        self.name = [dictionary objectForKey:@"destination"];
+        self.status = (int)[dictionary objectForKey:@"status"];
+        self.date = [dictionary objectForKey:@"unix_timestamp"];
+        self.people = [dictionary objectForKey:@"people"];
     }
     return self;
 }

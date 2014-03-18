@@ -15,7 +15,6 @@
 @property (strong) NSUserDefaults *defaults;
 
 -(Mob *)mobAtIndex:(NSInteger)index;
--(void)save;
 -(void)load;
 
 +(id)sharedInstance;

@@ -17,6 +17,7 @@
 - (Group*)groupAtIndex:(int)index;
 - (void)addGroup:(Group*)group;
 - (int)count;
+-(NSArray *)usernamesInGroupName:(NSString *)groupName;
 
 + (id)sharedInstance;
 

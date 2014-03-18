@@ -18,14 +18,28 @@
     //return [UserStorage retrieveGroups];
     if (self = [super init]) {
         self.groups = [NSMutableArray array];
-        NSArray *onebro = [NSArray arrayWithObjects:@"bananapants92", nil];
-        NSArray *bros = [NSArray arrayWithObjects:@"JeremyJJ", @"WahooNews", nil];
-        NSArray *morebros = [NSArray arrayWithObjects:@"LeoplurodonX", @"Scottymac", @"snoopdog", nil];
-        [self.groups addObject:[[Group alloc] initWithName:@"Neighbor" AndMembersList:onebro]];
-        [self.groups addObject:[[Group alloc] initWithName:@"Good Friends" AndMembersList:bros]];
-        [self.groups addObject:[[Group alloc] initWithName:@"Roommates" AndMembersList:morebros]];
+        NSArray *onebro = [NSArray arrayWithObjects:@"user1", nil];
+        NSArray *bros = [NSArray arrayWithObjects:@"user1", @"user2", nil];
+        NSArray *morebros = [NSArray arrayWithObjects:@"user1", @"user2", @"user3", nil];
+        NSArray *evenmorebros = [NSArray arrayWithObjects:@"user1", @"user2", @"user3", @"user4", nil];
+        [self.groups addObject:[[Group alloc] initWithName:@"One User Group" AndMembersList:onebro]];
+        [self.groups addObject:[[Group alloc] initWithName:@"Two User Group" AndMembersList:bros]];
+        [self.groups addObject:[[Group alloc] initWithName:@"Three User Group" AndMembersList:morebros]];
+        [self.groups addObject:[[Group alloc] initWithName:@"Four User Group" AndMembersList:evenmorebros]];
     }
     return self;
+}
+
+-(NSArray *)usernamesInGroupName:(NSString *)groupName
+{
+    __block NSArray *usernames;
+    [self.groups enumerateObjectsUsingBlock:^(Group *group, NSUInteger idx, BOOL *stop) {
+        if (group.name == groupName) {
+            usernames = group.membersList;
+        }
+    }];
+    
+    return usernames;
 }
 
 - (Group*)groupAtIndex:(int)index
@@ -64,9 +78,10 @@
     Group *request = [self.groups objectAtIndex:[indexPath row]];
     
     newCell.textLabel.text = request.name;
-    // 
-    if (request.membersList.count > 2) {
-        newCell.detailTextLabel.text = [NSString stringWithFormat:@"%@, %@, and others...", request.membersList[0], request.membersList[1]];
+    if (request.membersList.count > 3) {
+        newCell.detailTextLabel.text = [NSString stringWithFormat:@"%@, %@, and %i others...", request.membersList[0], request.membersList[1], request.membersList.count-2];
+    } else if (request.membersList.count == 3) {
+        newCell.detailTextLabel.text = [NSString stringWithFormat:@"%@, %@, and 1 other...", request.membersList[0], request.membersList[1]];
     } else if (request.membersList.count == 2) {
         newCell.detailTextLabel.text = [NSString stringWithFormat:@"%@ and %@", request.membersList[0], request.membersList[1]];
     } else {

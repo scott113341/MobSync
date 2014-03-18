@@ -10,6 +10,8 @@
 #import "MobSyncServer.h"
 #import "Mobs.h"
 #import "UserStorage.h"
+#import "Groups.h"
+#import "Group.h"
 
 @interface MobCreationViewController ()
 
@@ -58,11 +60,27 @@
 // Create mob when user finishes form
 -(void)didSelectDone:(id)sender
 {
-    NSString *usernames = [self.mob.usernameArray componentsJoinedByString:@","];
+    // build array of selected usernames
+    NSMutableArray *usernames = self.mob.usernameArray;
+    NSArray *groupNames = self.mob.groupArray;
+    
+    // loop throgh group names
+    [groupNames enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        // loop through a group's usernames
+        [[[Groups sharedInstance] usernamesInGroupName:obj] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+            // add them if not already added
+            NSLog(@"try %@", obj);
+            if ([usernames indexOfObject:obj] == NSNotFound) {
+                NSLog(@"ok %@", obj);
+                [usernames addObject:obj];
+            }
+        }];
+    }];
+    NSString *usernameString = [usernames componentsJoinedByString:@","];
     
     // get mob data from server
     NSString *uri = @"/mobs.json";
-    NSString *body = [NSString stringWithFormat:@"username=%@&usernames=%@&destination=%@", [UserStorage retrieveActiveUser], usernames, self.destination.text];
+    NSString *body = [NSString stringWithFormat:@"username=%@&usernames=%@&destination=%@", [UserStorage retrieveActiveUser], usernameString, self.destination.text];
     NSData *responseData = [MobSyncServer requestURI:uri HTTPMethod:@"POST" HTTPBody:body];
     NSDictionary *response = [MobSyncServer convertDataToJSON:responseData];
     
@@ -72,8 +90,7 @@
         
         Mobs *mobs = [Mobs sharedInstance];
         [mobs.all addObject:self.mob];
-        
-        NSLog(@"%@", self.navigationController);
+        [mobs load];
         
         [self.navigationController popViewControllerAnimated:YES];
     }
